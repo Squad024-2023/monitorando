@@ -1,0 +1,100 @@
+/* CSS Document */ :root {
+  --primaryColor: #4d004d; /*ROSA ESCURO*/
+  --secondaryColor: #349400; /*VERDE ESCURO*/
+  --tertiaryColor: #990199; /*ROSA MAIS CLARO*/
+  --support1Color: #e602e6; /*ROSA CLARO*/
+  --support2Color: #48c902; /*VERDE CLARO*/
+}
+html {
+  font-size: 62.5%; /*coloca a fonte padrao do site como 10px. 1rem=10px*/
+}
+* {
+  box-sizing: border-box;
+  color: black;
+  padding: 0px;
+  margin: 0px;
+	font-family:"Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+}
+header {
+  width: 100%;
+  height: 8rem;
+  background-color: white;
+  position: fixed;
+  border-bottom: solid 2px var(--tertiaryColor);
+}
+section {
+  width: 100%;
+  height: 100vh;
+  border-bottom: solid 2px var(--tertiaryColor);
+}
+nav {
+  display: flex;
+  font-size: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  height: 100%;
+}
+ul {
+  list-style: none;
+}
+.menu > li {
+  color: var(--primaryColor);
+}
+.menu {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  font-size: 2rem;
+  justify-content: space-evenly;
+  align-items: center;
+}
+nav > div {
+  width: 12rem;
+  color: var(--primaryColor);
+}
+.logo {}
+.login {
+  text-align: right;
+}
+footer {
+  width: 100%;
+  height: 15rem;
+  color: white;
+  background-color: var(--primaryColor);
+  display: flex;
+  flex-direction: column;
+}
+footer > div {
+  border: solid 1px white;
+  width: 100%;
+  color: white;
+}
+.contatos {
+  height: 7rem;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.contatos > span {
+  color: white;
+  font-size: 2rem;
+}
+.sociais {
+  color: white;
+  height: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.copy {
+  color: white;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
