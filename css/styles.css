@@ -1,40 +1,42 @@
-/* CSS Document */ :root {
-  --primaryColor: #4d004d; /*ROSA ESCURO*/
-  --secondaryColor: #349400; /*VERDE ESCURO*/
-  --tertiaryColor: #990199; /*ROSA MAIS CLARO*/
-  --supportColor1: #e602e6; /*ROSA CLARO*/
-  --supportColor2: #48c902; /*VERDE CLARO*/
-}
-html {
-  font-size: 62.5%;
-}
-* {
-  box-sizing: border-box;
-  color: black;
-  padding: 0;
+/* =============================================
+ *
+ *   FIXED RESPONSIVE NAV
+ *
+ *   (c) 2014 @adtileHQ
+ *   http://www.adtile.me
+ *   http://twitter.com/adtilehq
+ *
+ *   Free to use under the MIT License.
+ *
+ * ============================================= */
+
+body, div,
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, dl, dt, dd, ol, ul, li, hr,
+fieldset, form, label, legend, th, td,
+article, aside, figure, footer, header, hgroup, menu, nav, section,
+summary, hgroup {
   margin: 0;
+  padding: 0;
   border: 0;
-  font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
 }
-a:active, a:hover {
+
+a:active,
+a:hover {
   outline: 0;
 }
-@-webkit-viewport {
-  width: device-width;
-}
-@-moz-viewport {
-  width: device-width;
-}
-@-ms-viewport {
-  width: device-width;
-}
-@-o-viewport {
-  width: device-width;
-}
-@viewport {
-  width: device-width;
-}
-/*Estilos da Navbar*/
+
+@-webkit-viewport { width: device-width; }
+@-moz-viewport { width: device-width; }
+@-ms-viewport { width: device-width; }
+@-o-viewport { width: device-width; }
+@viewport { width: device-width; }
+
+
+/* ------------------------------------------
+  RESPONSIVE NAV STYLES
+--------------------------------------------- */
+
 .nav-collapse ul {
   margin: 0;
   padding: 0;
@@ -42,10 +44,12 @@ a:active, a:hover {
   display: block;
   list-style: none;
 }
+
 .nav-collapse li {
   width: 100%;
   display: block;
 }
+
 .js .nav-collapse {
   clip: rect(0 0 0 0);
   max-height: 0;
@@ -54,14 +58,17 @@ a:active, a:hover {
   overflow: hidden;
   zoom: 1;
 }
+
 .nav-collapse.opened {
   max-height: 9999px;
 }
+
 .disable-pointer-events {
   pointer-events: none !important;
 }
+
 .nav-toggle {
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -69,8 +76,8 @@ a:active, a:hover {
   -o-user-select: none;
   user-select: none;
 }
-/*Controlando a responsividade para telas menores*/
-@media screen and (min-width: 55em) {
+
+@media screen and (min-width: 40em) {
   .js .nav-collapse {
     position: relative;
   }
@@ -81,6 +88,12 @@ a:active, a:hover {
     display: none;
   }
 }
+
+
+/* ------------------------------------------
+  DEMO STYLES
+--------------------------------------------- */
+
 body {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -89,39 +102,58 @@ body {
   background: #fff;
   font: normal 100%/1.4 sans-serif;
 }
+
 section {
-  width: 100%;
-  height: 100vh;
+  border-bottom: 1px solid #999;
+  text-align: center;
   padding: 100px 0 0;
-  border-bottom: solid 2px var(--tertiaryColor);
+  height: 800px;
+  width: 100%;
 }
+
+h1 {
+  margin-bottom: .5em;
+}
+
+p {
+  width: 90%;
+  margin: 0 auto;
+}
+
+
+/* ------------------------------------------
+  FIXED HEADER
+--------------------------------------------- */
+
 header {
-  background: var(--primaryColor);
+  background: #f4421a;
   position: fixed;
   z-index: 3;
   width: 100%;
   left: 0;
   top: 0;
 }
-@media screen and (min-width: 55em) {
-  header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-}
+
 .logo {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
   text-decoration: none;
-  font: bold 2rem "Sun Seed";
-  line-height: 45px;
+  font-weight: bold;
+  line-height: 55px;
   padding: 0 20px;
   color: #fff;
+  float: left;
 }
+
+
+/* ------------------------------------------
+  MASK
+--------------------------------------------- */
+
 .mask {
   -webkit-transition: opacity 300ms;
   -moz-transition: opacity 300ms;
   transition: opacity 300ms;
-  background: rgba(0, 0, 0, .5);
+  background: rgba(0,0,0, .5);
   visibility: hidden;
   position: fixed;
   opacity: 0;
@@ -131,70 +163,85 @@ header {
   left: 0;
   top: 0;
 }
+
 .android .mask {
   -webkit-transition: none;
   transition: none;
 }
+
 .js-nav-active .mask {
   visibility: visible;
   opacity: 1;
 }
-@media screen and (min-width: 55em) {
+
+@media screen and (min-width: 40em) {
   .mask {
     display: none !important;
     opacity: 0 !important;
   }
 }
-/*Estilos dos objetos da navegação*/
+
+
+/* ------------------------------------------
+  NAVIGATION STYLES
+--------------------------------------------- */
+
 .fixed {
   position: fixed;
   width: 100%;
   left: 0;
   top: 0;
 }
-.nav-collapse, .nav-collapse * {
+
+.nav-collapse,
+.nav-collapse * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-.nav-collapse, .nav-collapse ul {
+
+.nav-collapse,
+.nav-collapse ul {
   list-style: none;
   width: 100%;
   float: left;
 }
-@media screen and (min-width: 55em) {
+
+@media screen and (min-width: 40em) {
   .nav-collapse {
     float: right;
     width: auto;
   }
 }
+
 .nav-collapse li {
   float: left;
   width: 100%;
 }
-@media screen and (min-width: 55em) {
+
+@media screen and (min-width: 40em) {
   .nav-collapse li {
     width: auto;
   }
 }
+
 .nav-collapse a {
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
   border-top: 1px solid white;
   text-decoration: none;
-  background: var(--primaryColor);
+  background: #f4421a;
   padding: 0.7em 1em;
   color: #fff;
   width: 100%;
   float: left;
-  font-size: 1.5rem;
-  height: 45px;
-  display: flex;
-  align-items: center;
 }
-.nav-collapse a:active, .nav-collapse .active a {
-  background: var(--secondaryColor);
+
+.nav-collapse a:active,
+.nav-collapse .active a {
+  background: #b73214;
 }
-@media screen and (min-width: 55em) {
+
+@media screen and (min-width: 40em) {
   .nav-collapse a {
     border-left: 1px solid white;
     padding: 1.02em 2em;
@@ -204,16 +251,32 @@ header {
     margin: 0;
   }
 }
+
 .nav-collapse ul ul a {
-  background: var(--primaryColor);
+  background: #ca3716;
   padding-left: 2em;
 }
-@media screen and (min-width: 55em) {
+
+@media screen and (min-width: 40em) {
   .nav-collapse ul ul a {
     display: none;
   }
 }
-/*Estilo dos objetos de navegação quando ativos*/
+
+
+/* ------------------------------------------
+  NAV TOGGLE STYLES
+--------------------------------------------- */
+
+@font-face {
+    font-family: 'sun_seedregular';
+    src: url('sun-seed-webfont.woff2') format('woff2'),
+         url('sun-seed-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 .nav-toggle {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -222,64 +285,30 @@ header {
   position: relative;
   overflow: hidden;
   width: 60px;
-  height: 45px;
+  height: 55px;
   float: right;
-  align-items: center;
 }
+
 .nav-toggle:before {
-  color: white; /*Cor do ícone*/
-  font: normal 40px/55px "Sun Seed"; /*Editar o primeiro número muda o tamanho do ícone*/
+  color: #fff; /* Edit this to change the icon color */
+  font: normal 28px/55px "responsivenav"; /* Edit font-size (28px) to change the icon size */
   text-transform: none;
+  text-align: center;
   position: absolute;
   content: "\2261"; /* Hamburger icon */
   text-indent: 0;
   speak: none;
   width: 100%;
   left: 0;
-  top: -5px;
+  top: 0;
 }
+
 .nav-toggle.active:before {
   font-size: 24px;
   content: "\78"; /* Close icon */
 }
-footer {
-  width: 100%;
-  height: 15rem;
-  color: white;
-  background-color: var(--primaryColor);
-  display: flex;
-  flex-direction: column;
-}
-footer > div {
-  border: solid 1px white;
-  width: 100%;
-  color: white;
-}
-.contatos {
-  height: 7rem;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 2rem;
-}
-.contatos > span {
-  color: white;
-  font-size: 2rem;
-}
-.sociais {
-  color: white;
-  height: 6rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-}
-.copy {
-  color: white;
-  height: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
+
+
+
+

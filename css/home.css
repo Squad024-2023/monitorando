@@ -1,0 +1,24 @@
+/* CSS Document */ :root {
+  --primaryColor: #4d004d; /*ROSA ESCURO*/
+  --secondaryColor: #349400; /*VERDE ESCURO*/
+  --tertiaryColor: #990199; /*ROSA MAIS CLARO*/
+  --supportColor1: #e602e6; /*ROSA CLARO*/
+  --supportColor2: #48c902; /*VERDE CLARO*/
+}
+.sessao1{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
+	
+}
+h1{
+	font-size: 4rem;
+}
+p{
+	font-size: 2rem;
+	margin: 0;
+}
+.textoS1{
+	text-align: left;
+}
