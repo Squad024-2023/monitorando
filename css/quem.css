@@ -1,0 +1,43 @@
+/* CSS Document */ :root {
+    --primaryColor: #4d004d; /*ROSA ESCURO*/
+    --secondaryColor: #349400; /*VERDE ESCURO*/
+    --tertiaryColor: #990199; /*ROSA MAIS CLARO*/
+    --supportColor1: #e602e6; /*ROSA CLARO*/
+    --supportColor2: #48c902; /*VERDE CLARO*/
+  }
+
+.sessao1{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 80%;
+    height: 100vh;
+    justify-content: center;
+	align-items: center;
+    border: 1px solid red;
+}
+
+.textoS1{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    width: 100%;
+}
+
+.sessao1 > img {
+    align-self: flex-end;
+    height: 50rem;
+    width: 50rem;
+    border: 1px solid black;
+}
+
+h1{
+	font-size: 4rem;
+}
+
+p{
+	font-size: 2rem;
+	margin: 0;
+    text-align: justify;
+}
+
