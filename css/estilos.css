@@ -19,6 +19,9 @@ html {
 a:active, a:hover {
   outline: 0;
 }
+a{
+	text-decoration: none;
+}
 @-webkit-viewport {
   width: device-width;
 }
