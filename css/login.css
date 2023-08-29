@@ -1,0 +1,172 @@
+/* CSS Document */ :root {
+  --primaryColor: #4d004d; /*ROSA ESCURO*/
+  --secondaryColor: #349400; /*VERDE ESCURO*/
+  --tertiaryColor: #990199; /*ROSA MAIS CLARO*/
+  --supportColor1: #e602e6; /*ROSA CLARO*/
+  --supportColor2: #48c902; /*VERDE CLARO*/
+}
+.sessao1 {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  background-image: url("../images/chalkboardlighterpink.png");
+}
+h1 {
+  font-size: 4rem;
+  color: inherit;
+}
+p {
+  font-size: 2rem;
+  margin: 0;
+  color: inherit;
+}
+.container {
+  position: relative;
+  align-items: center;
+  padding: 20px 30px;
+  width: 90%;
+  max-width: 400px;
+  background: var(--secondaryColor);
+  border-radius: 4px;
+  box-shadow: 0 0 15px rbga(0, 0, 0, 0.3);
+}
+.switch {
+  position: absolute;
+  right: 30px;
+  display: flex;
+  border-bottom: 1px solid white;
+}
+.switch.active {
+  border-bottom: 1px solid salmon;
+}
+.switch:after {
+  content: '';
+  height: 6px;
+  width: 60px;
+  background: grey;
+  border-radius: 60px 60px 0 0;
+  position: absolute;
+  bottom: 0;
+  left: 8px;
+  transition: 0.3s ease;
+}
+.switch.active:after {
+  left: 82px;
+  width: 70px;
+  brackground: salmon;
+}
+.login {
+  padding: 5px 12px;
+  background-color: lightgrey;
+  margin-bottom: 10px;
+  border-radius: 50px;
+  text-align: right;
+  margin-left: 4px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.cadastro {
+  padding: 5px 12px;
+  margin-bottom: 10px;
+  border-radius: 50px;
+  text-align: right;
+  margin-left: 4px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.container .outer {
+  width: 100%;
+  margin-top: 40px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.outer #form {
+  width: 200%;
+  position: relative;
+  display: flex;
+  margin: auto;
+  transition: 0.2s ease-in-out;
+}
+#page {
+  margin: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+label {
+  display: block;
+  margin-bottom: 5px;
+  padding: 10px 15px;
+  text-align: center;
+  letter-spacing: 2px;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.element {
+  position: relative;
+}
+.element input {
+  width: 80%;
+  height: 40px;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  background: red;
+  border: 1px solid aqua;
+  padding-left: 40px;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+input::placeholder {
+  color: greenyellow;
+  font-size: 20px;
+}
+.element span {
+  position: absolute;
+  left: 30px;
+  top: 12px;
+  font-size: 18px;
+}
+#btn {
+  padding: 5px 25px;
+  background: blue;
+  border-radius: 0.5rem;
+  height: 5rem;
+  font-size: 25px;
+  text-transform: uppercase;
+  border: none;
+  margin-top: 1rem;;
+  cursor: pointer;
+}
+#btn:active {
+  transform: scale(1.01);
+}
+#eSenha{
+	margin-top: 1rem;
+	font-size: 1.5rem;
+	cursor: pointer;
+}
+#lBtnG, #lBtnF {
+  padding: 5px 25px;
+  background: blue;
+  height: 5rem;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  border: none;
+  margin-top: 1rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+button > img {
+  height: 3.5rem;
+}

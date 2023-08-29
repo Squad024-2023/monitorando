@@ -5,20 +5,67 @@
   --supportColor1: #e602e6; /*ROSA CLARO*/
   --supportColor2: #48c902; /*VERDE CLARO*/
 }
-.sessao1{
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-content: center;
-	
+.sessao1 {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  background-image: url("../images/chalkboarddarkpink.png");
 }
-h1{
-	font-size: 4rem;
+h1 {
+  font-size: 4rem;
+  color: inherit;
 }
-p{
-	font-size: 2rem;
-	margin: 0;
+p {
+  font-size: 2rem;
+  margin: 0;
+  color: inherit;
 }
-.textoS1{
-	text-align: left;
+.textoS1 {
+  max-width: 50rem;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  margin: 0;
 }
+.sessao1 > img {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vw;
+  max-width: 40rem;
+  max-height: 40rem;
+  border-radius: 100%;
+}
+.sessao2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+	align-items: center;
+  background-image: url("../images/chalkboardgreen.png");
+  color: white;
+}
+.sessao2 > h2 {
+  font-size: 3rem;
+  text-align: center;
+  color: inherit;
+}
+.container{
+	  max-width: 1366px;
+	max-height: 768px;
+	overflow: hidden;	
+}
+.container .wrapper {
+  width: 100%;
+	height: 100%;
+}
+.wrapper img{
+	width: 100%;
+	height: 100%;
+}
+
+
+
+
+
