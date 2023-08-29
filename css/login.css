@@ -24,62 +24,65 @@ p {
 .container {
   position: relative;
   align-items: center;
-  padding: 20px 30px;
+  padding: 2rem 3rem;
   width: 90%;
-  max-width: 400px;
-  background: var(--secondaryColor);
-  border-radius: 4px;
-  box-shadow: 0 0 15px rbga(0, 0, 0, 0.3);
+  max-width: 40rem;
+  background: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 1.5rem rbga(0, 0, 0, 0.3);
 }
 .switch {
   position: absolute;
-  right: 30px;
+  right: 3rem;
   display: flex;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid var(--supportColor2);
 }
 .switch.active {
-  border-bottom: 1px solid salmon;
+  border-bottom: 1px solid var(--supportColor1);
 }
 .switch:after {
   content: '';
-  height: 6px;
-  width: 60px;
-  background: grey;
-  border-radius: 60px 60px 0 0;
+  height: 0.5rem;
+  width: 7rem;
+  background: var(--supportColor2);
+  border-radius: 6rem 6rem 0 0;
   position: absolute;
   bottom: 0;
-  left: 8px;
   transition: 0.3s ease;
 }
 .switch.active:after {
-  left: 82px;
-  width: 70px;
-  brackground: salmon;
+  left: 6.5rem;
+  width: 8.5rem;
+  background: var(--supportColor1);
 }
 .login {
-  padding: 5px 12px;
-  background-color: lightgrey;
-  margin-bottom: 10px;
-  border-radius: 50px;
+  font-weight: bold;
+  color: white;
+  padding: 0.5rem 1.2rem;
+  background-color: var(--supportColor2);
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
   text-align: right;
-  margin-left: 4px;
+  margin-left: 0.5rem;
   letter-spacing: 1px;
   cursor: pointer;
   transition: 0.3s ease;
 }
 .cadastro {
-  padding: 5px 12px;
-  margin-bottom: 10px;
-  border-radius: 50px;
+  font-weight: bold;
+  color: var(--primaryColor);
+  padding: 0.5rem 1.2rem;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
   text-align: right;
-  margin-left: 4px;
+  margin-left: 0.5rem;
   letter-spacing: 1px;
   cursor: pointer;
   transition: 0.3s ease;
 }
 .container .outer {
   width: 100%;
-  margin-top: 40px;
+  margin-top: 4rem;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -94,18 +97,19 @@ p {
 #page {
   margin: auto;
   width: 100%;
+  height: 600px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 label {
   display: block;
-  margin-bottom: 5px;
-  padding: 10px 15px;
+  margin-bottom: 0.5rem;
+  padding: 1rem 1.5rem;
   text-align: center;
   letter-spacing: 2px;
-  font-size: 20px;
+  font-size: 2.5rem;
+  color: var(--primaryColor);
   font-weight: bold;
   text-transform: uppercase;
 }
@@ -113,53 +117,52 @@ label {
   position: relative;
 }
 .element input {
-  width: 80%;
-  height: 40px;
-  border-radius: 4px;
+  width: 100%;
+  height: 4rem;
+  border-radius: 0.5rem;
   margin-bottom: 1rem;
-  background: red;
-  border: 1px solid aqua;
-  padding-left: 40px;
-  font-size: 20px;
+  border: 1px solid var(--primaryColor);
+  padding-left: 4rem;
+  font-size: 2rem;
   letter-spacing: 1px;
 }
 input::placeholder {
-  color: greenyellow;
-  font-size: 20px;
-}
-.element span {
-  position: absolute;
-  left: 30px;
-  top: 12px;
-  font-size: 18px;
+  color: var(--primaryColor);
+  font-size: 2rem;
 }
 #btn {
   padding: 5px 25px;
-  background: blue;
+  background: var(--primaryColor);
+  color: white;
   border-radius: 0.5rem;
   height: 5rem;
-  font-size: 25px;
+  font-size: 2.5rem;
   text-transform: uppercase;
   border: none;
-  margin-top: 1rem;;
+  margin-top: 1rem;
+  margin-bottom: 5rem;
   cursor: pointer;
+  box-shadow: 0.2rem 0.2rem 0.8rem 0.1rem #0000003a;
 }
-#btn:active {
+#btn, lBtnG, #lBtnF, #cBtnG, #cBtnF:active {
   transform: scale(1.01);
 }
-#eSenha{
-	margin-top: 1rem;
-	font-size: 1.5rem;
-	cursor: pointer;
-}
-#lBtnG, #lBtnF {
-  padding: 5px 25px;
-  background: blue;
-  height: 5rem;
-  border-radius: 0.5rem;
+#eSenha {
+  margin-top: 3rem;
   font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--primaryColor);
+}
+#lBtnG, #lBtnF, #cBtnG, #cBtnF {
+	color: var(--primaryColor);
+  padding: 0.5rem 2.5rem;
+  background: transparent;
+  height: 5rem;
+  width: 80%;
+  border-radius: 0.5rem;
+  font-size: 1.4rem;
   text-transform: uppercase;
-  border: none;
+  border-bottom: solid 1px var(--primaryColor);
   margin-top: 1rem;
   cursor: pointer;
   display: flex;
@@ -167,6 +170,9 @@ input::placeholder {
   align-items: center;
   gap: 1rem;
 }
+#lBtnG, cBtnG {
+  margin-top: 5rem;
+}
 button > img {
-  height: 3.5rem;
+  height: 2rem;
 }

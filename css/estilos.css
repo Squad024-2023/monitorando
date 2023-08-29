@@ -37,6 +37,13 @@ a{
 @viewport {
   width: device-width;
 }
+@font-face {
+    font-family: 'sun_seedregular';
+    src: url("sun-seed-webfont.woff2") format('woff2'),
+         url("sun-seed-webfont.woff") format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 /*Estilos da Navbar*/
 .nav-collapse ul {
   margin: 0;
