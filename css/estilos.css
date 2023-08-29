@@ -70,7 +70,7 @@ a:active, a:hover {
   user-select: none;
 }
 /*Controlando a responsividade para telas menores*/
-@media screen and (min-width: 55em) {
+@media screen and (min-width: 58em) {
   .js .nav-collapse {
     position: relative;
   }
@@ -92,18 +92,18 @@ body {
 section {
   width: 100%;
   height: 100vh;
-  padding: 100px 0 0;
-  border-bottom: solid 2px var(--tertiaryColor);
+  padding: 5.5rem 1rem 0;
+  border-bottom: solid 2px white;
 }
 header {
-  background: var(--primaryColor);
+  background-color: white;
   position: fixed;
   z-index: 3;
   width: 100%;
   left: 0;
   top: 0;
 }
-@media screen and (min-width: 55em) {
+@media screen and (min-width: 58em) {
   header {
     display: flex;
     justify-content: center;
@@ -115,7 +115,7 @@ header {
   font: bold 2rem "Sun Seed";
   line-height: 45px;
   padding: 0 20px;
-  color: #fff;
+  color: var(--tertiaryColor);
 }
 .mask {
   -webkit-transition: opacity 300ms;
@@ -139,7 +139,7 @@ header {
   visibility: visible;
   opacity: 1;
 }
-@media screen and (min-width: 55em) {
+@media screen and (min-width: 58em) {
   .mask {
     display: none !important;
     opacity: 0 !important;
@@ -162,7 +162,7 @@ header {
   width: 100%;
   float: left;
 }
-@media screen and (min-width: 55em) {
+@media screen and (min-width: 58em) {
   .nav-collapse {
     float: right;
     width: auto;
@@ -172,18 +172,19 @@ header {
   float: left;
   width: 100%;
 }
-@media screen and (min-width: 55em) {
+@media screen and (min-width: 58em) {
   .nav-collapse li {
     width: auto;
   }
 }
 .nav-collapse a {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  border-top: 1px solid white;
+  border-top: 1px solid var(--tertiaryColor);;
   text-decoration: none;
-  background: var(--primaryColor);
+  background: white;
   padding: 0.7em 1em;
-  color: #fff;
+  font-weight: 700;
+  color: var(--tertiaryColor);
   width: 100%;
   float: left;
   font-size: 1.5rem;
@@ -192,11 +193,11 @@ header {
   align-items: center;
 }
 .nav-collapse a:active, .nav-collapse .active a {
-  background: var(--secondaryColor);
+  background-color: var(--primaryColor);
+  color: white;
 }
-@media screen and (min-width: 55em) {
+@media screen and (min-width: 58em) {
   .nav-collapse a {
-    border-left: 1px solid white;
     padding: 1.02em 2em;
     text-align: center;
     border-top: 0;
@@ -208,7 +209,7 @@ header {
   background: var(--primaryColor);
   padding-left: 2em;
 }
-@media screen and (min-width: 55em) {
+@media screen and (min-width: 58em) {
   .nav-collapse ul ul a {
     display: none;
   }
@@ -227,7 +228,7 @@ header {
   align-items: center;
 }
 .nav-toggle:before {
-  color: white; /*Cor do ícone*/
+  color: var(--tertiaryColor); /*Cor do ícone*/
   font: normal 40px/55px "Sun Seed"; /*Editar o primeiro número muda o tamanho do ícone*/
   text-transform: none;
   position: absolute;
