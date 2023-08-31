@@ -100,7 +100,8 @@ body {
 }
 section {
   width: 100%;
-  height: 100vh;
+	height: 100%;
+  min-height: 100vh;
   padding: 5.5rem 1rem 0;
   border-bottom: solid 2px white;
 }
@@ -258,7 +259,6 @@ header {
 }
 footer {
   width: 100%;
-  height: 20rem;
   color: white;
   background-color: var(--primaryColor);
   display: flex;
@@ -268,7 +268,8 @@ footer {
 }
 .footerCentro {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
+	flex-wrap: wrap;
 	padding: 1rem;
 	gap:1rem;
 }
@@ -277,7 +278,7 @@ footer > div {
   color: white;
 }
 .contatos {
-  width: 30rem;
+width: 30rem;
   color: white;
   display: flex;
   flex-direction: column;
@@ -285,16 +286,21 @@ footer > div {
 .contatos > span {
   color: white;
   font-size: 1.5rem;
+		text-align: center;
 	
 }
 .sociais {
+	width: 30rem;
   color: white;
   display: flex;
   flex-direction: column;
+	align-items: center;
 }
 .sociais > span {
+
   color: inherit;
   font-size: 1.5rem;
+	text-align: center;
 }
 .sociais > div {
   height: 4rem;
@@ -312,7 +318,9 @@ footer > div {
   color: inherit;
   font-size: 1.5rem;
   text-decoration: none;
+		text-align: center;
 }
+
 .copy {
   color: white;
   height: 2rem;

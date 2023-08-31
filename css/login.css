@@ -11,6 +11,7 @@
   flex-wrap: wrap;
   align-items: center;
   background-image: url("../images/chalkboardlighterpink.png");
+		background-size: cover;
 }
 h1 {
   font-size: 4rem;
