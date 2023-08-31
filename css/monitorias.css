@@ -1,0 +1,81 @@
+/* CSS Document */ :root {
+  --primaryColor: #4d004d; /*ROSA ESCURO*/
+  --secondaryColor: #349400; /*VERDE ESCURO*/
+  --tertiaryColor: #990199; /*ROSA MAIS CLARO*/
+  --supportColor1: #e602e6; /*ROSA CLARO*/
+  --supportColor2: #48c902; /*VERDE CLARO*/
+}
+.sessao1 {
+  display: flex;
+	flex-direction: column;
+	align-items: center;
+  background-image: url("../images/chalkboardlighterpink.png");
+  color: white;
+}
+h1 {
+  font-size: 4rem;
+  color: inherit;
+  margin: 2rem 0;
+	width: 80%;
+	 max-width: 110rem;
+	text-align: center;
+}
+p {
+  font-size: 2rem;
+  margin: 0;
+  color: inherit;
+}
+
+.form {
+  width: 80%;
+	  max-width: 110rem;
+  display: flex;
+  flex-direction: column;
+}
+.busc {
+  display: flex;
+  height: 5rem;
+  width: 100%;
+}
+.busc > input {
+  height: 100%;
+  width: 80%;
+  border-radius: 0.5rem 0 0 0.5rem;
+  padding-left: 2rem;
+  color: var(--primaryColor);
+  font-size: 2rem;
+}
+input::placeholder {
+  color: var(--primaryColor);
+  font-size: 2rem;
+}
+input:focus {
+  outline: none;
+}
+.busc:focus-within {
+  border: solid 0.2rem var(--tertiaryColor);
+  border-style: outset;
+}
+#busca {
+  width: 20%;
+  color: var(--primaryColor);
+  background-color: white;
+  border-left: 1px solid var(--primaryColor);
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+select{
+	margin-top: 2rem;
+	width: 18rem;
+	height: 4rem;
+	border-radius: 0.5rem;
+	font-size: 1.5rem;
+	color: var(--primaryColor);
+}
+select:focus{
+	outline: solid 0.2rem var(--tertiaryColor);
+}
+option{
+	color: var(--primaryColor);
+}
+
+

@@ -112,6 +112,7 @@ header {
   left: 0;
   top: 0;
   border-bottom: solid 2px var(--primaryColor);
+	margin-top: 0.5rem;
 }
 @media screen and (min-width: 58em) {
   header {
