@@ -7,11 +7,11 @@
 }
 h1 {
   color: white;
-  font-size: 3.2rem;
+  font-size: 3rem;
 }
 p {
   color: white;
-  font-size: 1.7rem;
+  font-size: 2rem;
   margin: 0;
   text-align: justify;
 }
@@ -27,8 +27,9 @@ p {
   width: auto;
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  align-content: center;
 }
 .bloco {
   width: 100%;
@@ -55,7 +56,6 @@ img:hover {
   text-align: center;
   justify-content: center;
   align-items: center;
-  border: 1px solid black;
 }
 .benefits {
   height: 100%;
@@ -93,7 +93,7 @@ img:hover {
   color: white;
 }
 .cardbenefits > p {
-  text-align: justify;
+  text-align: center;
 }
 .cardbenefits:hover {
   background-color: #4d004d;
@@ -107,5 +107,18 @@ img:hover {
     height: 100%;
     display: flex;
     flex-direction: column;
+  }
+}
+@media screen and (max-width:740px) {
+  h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+  .h1tutor {
+    text-align: center;
+  }
+  p {
+    font-size: 1.5rem;
+    text-align: center;
   }
 }

@@ -11,6 +11,7 @@
   justify-content: center;
   flex-wrap: wrap;
   align-items: center;
+  align-content: center;
   background-image: url("../images/chalkboarddarkpink.png");
   background-size: cover;
 }
@@ -29,9 +30,6 @@ p {
   }
   p {
     font-size: 1.5rem;
-  }
-  .sessao1 > img {
-    align-self: flex-start;
   }
 }
 .textoS1 {

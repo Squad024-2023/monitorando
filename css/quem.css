@@ -19,10 +19,8 @@ p {
   background-image: url("../images/chalkboardgreen.png");
   display: flex;
   flex-direction: column;
-  margin-top: 5.5rem;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
 }
 .bloco1sessao1 {
   display: flex;
@@ -33,6 +31,18 @@ p {
 .bloco2sessao2 {
   align-self: flex-end;
   height: 100%;
+}
+.bloco2sessao1 {
+  width: 80%;
+  max-width: 80rem;
+  display: flex;
+  justify-content: flex-end;
+}
+.bloco2sessao1 > img {
+  object-fit: contain;
+  width: 100%;
+  max-width: 40rem;
+  border-radius: 1rem;
 }
 .sessao2 {
   background-image: url("../images/chalkboarddarkpink.png");
@@ -51,20 +61,24 @@ p {
 .sessao3 {
   background-image: url("../images/chalkboardgreen.png");
   background-size: cover;
+  padding: 2rem 0;
 }
 .bloco1sessao3 {
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
 }
 .sessao3 h1, .sessao3 p {
   color: #FFFFFF;
   text-align: center;
 }
 .depoimentos {
-  width: 40%;
-  height: 50%;
+  width: 100%;
+  max-width: 40rem;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -79,9 +93,7 @@ p {
   color: #000000;
   border-radius: 15px;
   padding: 20px;
-  width: 50%;
-  max-width: 40rem;
-  min-width: 20rem;
+  width: 100%;
   position: relative;
   margin: 35px auto;
   font-style: italic;
@@ -108,5 +120,15 @@ p {
     width: 100%;
     height: 100%;
     flex-direction: column;
+  }
+}
+@media screen and (max-width:740px) {
+  h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+  p {
+    font-size: 1.5rem;
+    text-align: center;
   }
 }
