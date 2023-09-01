@@ -5,8 +5,8 @@
 <p> Kauã Alves de Melo
 Arthur Bernard Pereira Freitas </br> 
 Angelo Antonio Germano Rodrigues  </br> 
-Bruno Ribeiro </br> 
-Bruno  </br> 
+Bruno Vilhena Ribeiro </br> 
+Bruno Perez Zeghir Dias  </br> 
 </p>
 
 Repositório referente à primeira entrega do projeto monitorando da Squad 02</br> 
