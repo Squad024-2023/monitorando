@@ -6,11 +6,13 @@
   --supportColor2: #48c902; /*VERDE CLARO*/
 }
 .sessao1 {
+  height: 100%;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   align-items: center;
   background-image: url("../images/chalkboarddarkpink.png");
+  background-size: cover;
 }
 h1 {
   font-size: 4rem;
@@ -20,6 +22,17 @@ p {
   font-size: 2rem;
   margin: 0;
   color: inherit;
+}
+@media screen and (max-width:400px) {
+  h1 {
+    font-size: 2rem;
+  }
+  p {
+    font-size: 1.5rem;
+  }
+  .sessao1 > img {
+    align-self: flex-start;
+  }
 }
 .textoS1 {
   max-width: 50rem;
@@ -32,40 +45,138 @@ p {
 }
 .sessao1 > img {
   object-fit: cover;
-  width: 100vw;
-  height: 100vw;
-  max-width: 40rem;
-  max-height: 40rem;
+  width: 100%;
+  height: 100%;
+  max-width: 30rem;
+  max-height: 30rem;
   border-radius: 100%;
 }
 .sessao2 {
+  height: 100%;
+  padding: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
-	align-items: center;
+  align-items: center;
   background-image: url("../images/chalkboardgreen.png");
-  color: white;
+  background-size: cover;
 }
 .sessao2 > h2 {
-  font-size: 3rem;
+  font-size: 2rem;
+  color: white;
   text-align: center;
+  width: 100%;
+  max-width: 140rem;
+  margin-bottom: 4rem;
+}
+@media screen and (max-width: 58em) {
+  .sessao2 > h2 {
+    font-size: 1.5rem;
+    max-width: 70rem;
+  }
+}
+.contCentro {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 0 0.5rem;
+}
+.textoS2 {
+  color: white;
+  width: 100%;
+  max-width: 70rem;
+}
+.textoS2 > h3 {
+  margin-top: 1rem;
+  font-size: 1.5rem;
   color: inherit;
 }
-.container{
-	  max-width: 1366px;
-	max-height: 768px;
-	overflow: hidden;	
+.textoS2 > p {
+  font-size: 1.5rem;
+  color: inherit;
+  margin-top: 1rem;
+}
+.container {
+  margin-left: 1rem;
+  width: 100%;
+  max-width: 70rem;
+  overflow: hidden;
 }
 .container .wrapper {
   width: 100%;
-	height: 100%;
+  height: 100%;
 }
-.wrapper img{
-	width: 100%;
-	height: 100%;
+.wrapper img {
+  width: 100%;
+  height: 100%;
 }
-
-
-
-
-
+.sessao3 {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.textoS3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 4vh;
+}
+.textoS3 > h2 {
+  width: 100%;
+  max-width: 40rem;
+  font-size: 3rem;
+  color: var(--primaryColor);
+}
+.textoS3 > img {
+  width: 50%;
+  max-width: 40rem;
+}
+.cardsContainer {
+  margin: 1rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 0.5rem 0.5rem;
+}
+.cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  max-width: 300px;
+  width: 100%;
+  margin: 0 1rem;
+  height: 20rem;
+  margin-bottom: 2rem;
+  border-radius: 0.5rem;
+}
+.cards > img {
+  width: 8rem;
+  padding-bottom: 1rem;
+}
+.cards > span {
+  text-align: center;
+  font-size: 1.5rem;
+}
+.cards > span > span {
+  font-weight: bold;
+  color: var(--tertiaryColor);
+}
+.cards:nth-child(2) {
+  transition-delay: 200ms;
+}
+.cards:nth-child(3) {
+  transition-delay: 400ms;
+}
+.cards:nth-child(4) {
+  transition-delay: 600ms;
+}
+.cards:nth-child(5) {
+  transition-delay: 800ms;
+}

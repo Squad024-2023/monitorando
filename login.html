@@ -6,7 +6,8 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="stylesheet" href="css/estilos.css">
 <link rel="stylesheet" href="css/login.css">
-<script src="js/responsive-nav.js"></script>
+<script src="js/responsive-nav.js"></script> 
+<script defer src="js/app.js"></script>
 </head>
 <body>
 <header> <a href="index.html" class="logo" data-scroll>monitorando</a>
@@ -37,10 +38,9 @@
             <input type="password" placeholder="Senha">
           </div>
           <button id="btn">Login</button>
-			<a id="eSenha">Esqueceu a senha?</a>
           <button id="lBtnG"><img src="icons/googleicon.svg">Entrar com Google</button>
-          <button id="lBtnF">Entrar com Facebook</button>
-        </div>
+          <button id="lBtnF"><img src="icons/facebookicon.svg">Entrar com Facebook</button>
+          <a id="eSenha">Esqueceu a senha?</a> </div>
         <div id="page">
           <label>Registrar</label>
           <div class="element">
@@ -53,14 +53,20 @@
             <input type="password" placeholder="Senha">
           </div>
           <button id="btn">Registrar</button>
+          <button id="cBtnG"><img src="icons/googleicon.svg">Entrar com Google</button>
+          <button id="cBtnF"><img src="icons/facebookicon.svg">Entrar com Facebook</button>
         </div>
       </form>
     </div>
   </div>
 </section>
 <footer>
-  <div class="contatos"><span>E-mail:monitorando@gmail.com</span><span>Telefone:11 9 7233-5888</span></div>
-  <div class="sociais"><img src="icons/facebook-32x32.png"><img src="icons/instagram-32x32.png"></div>
+  <div class="footerCentro">
+    <div class="contatos"><span>CONTATOS</span><span>E-mail:monitorando@gmail.com</span><span>Telefone:11 9 7233-5888</span></div>
+    <div class="sociais"><span>SOCIAIS</span>
+      <div><a href=""><img src="icons/icone-facebook-32x32.png"></a><a href=""><img src="icons/icone-instagram-32x32.png"></a></div>
+    </div>
+  </div>
   <div class="copy">&copy;MONITORANDO. TODOS OS DIREITOS RESERVADOS</div>
 </footer>
 <script src="js/login.js"></script> 

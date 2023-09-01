@@ -37,6 +37,12 @@ a {
 @viewport {
   width: device-width;
 }
+@font-face {
+  font-family: 'sun_seedregular';
+  src: url("sun-seed-webfont.woff2") format('woff2'), url("sun-seed-webfont.woff") format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 /*Estilos da Navbar*/
 .nav-collapse ul {
   margin: 0;
@@ -94,9 +100,10 @@ body {
 }
 section {
   width: 100%;
-  height: 100vh;
+  height: 100%;
+  min-height: 100vh;
   padding: 5.5rem 1rem 0;
-  border-bottom: solid 2px white;
+  border-bottom: solid 0.5rem white;
 }
 header {
   background-color: white;
@@ -105,6 +112,9 @@ header {
   width: 100%;
   left: 0;
   top: 0;
+  border-bottom: solid 2px var(--primaryColor);
+  margin-top: 0.5rem;
+  box-shadow: 0.1rem 0.6rem 0.8rem 0.5rem #0000003a;
 }
 @media screen and (min-width: 58em) {
   header {
@@ -115,7 +125,7 @@ header {
 }
 .logo {
   text-decoration: none;
-  font: bold 2rem "Sun Seed";
+  font: 600 2rem "Sun Seed";
   line-height: 45px;
   padding: 0 20px;
   color: var(--tertiaryColor);
@@ -188,6 +198,7 @@ header {
   background: white;
   padding: 0.7em 1em;
   font-weight: 700;
+  border-left: solid 2px var(--primaryColor);
   color: var(--tertiaryColor);
   width: 100%;
   float: left;
@@ -249,42 +260,84 @@ header {
 }
 footer {
   width: 100%;
-  height: 15rem;
-  color: white;
-  background-color: var(--primaryColor);
+  color: var(--primaryColor);
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  border-top: 1px solid var(--tertiaryColor);
+}
+.footerCentro {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 1rem;
+  gap: 2rem;
+  border-bottom: 1px solid var(--tertiaryColor);
+}
+footer > div {
+  width: 100%;
+  color: inherit;
+}
+.contatos {
+  width: 30rem;
+  color: inherit;
   display: flex;
   flex-direction: column;
 }
-footer > div {
-  border: solid 1px white;
-  width: 100%;
-  color: white;
-}
-.contatos {
-  height: 7rem;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 2rem;
-}
 .contatos > span {
-  color: white;
-  font-size: 2rem;
+  color: inherit;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: right;
 }
 .sociais {
-  color: white;
-  height: 6rem;
+  width: 30rem;
+  color: inherit;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
+  flex-direction: column;
+}
+.sociais > span {
+  color: inherit;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.sociais > div {
+  height: 4rem;
+  display: flex;
+  gap: 5px;
 }
 .copy {
-  color: white;
+  color: inherit;
   height: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.ani {
+  filter: blur(5px);
+  transform: scale(0);
+  opacity: 0;
+  transition: ease-in-out 1s;
+}
+.animate {
+  filter: blur(0);
+  transform: scale(1);
+  opacity: 1;
+}
+.ani2 {
+  opacity: 0;
+  transition: ease-in-out 1s;
+}
+.animate2 {
+  opacity: 1;
+}
+@media(prefers-reduced-motion) {
+  .ani {
+    transition: none;
+  }
+  .ani2 {
+    transition: none;
+  }
 }
