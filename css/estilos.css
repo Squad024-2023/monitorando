@@ -19,8 +19,8 @@ html {
 a:active, a:hover {
   outline: 0;
 }
-a{
-	text-decoration: none;
+a {
+  text-decoration: none;
 }
 @-webkit-viewport {
   width: device-width;
@@ -182,7 +182,8 @@ header {
 }
 .nav-collapse a {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  border-top: 1px solid var(--tertiaryColor);;
+  border-top: 1px solid var(--tertiaryColor);
+  ;
   text-decoration: none;
   background: white;
   padding: 0.7em 1em;

@@ -1,32 +1,28 @@
 /* CSS Document */ :root {
-    --primaryColor: #4d004d; /*ROSA ESCURO*/
-    --secondaryColor: #349400; /*VERDE ESCURO*/
-    --tertiaryColor: #990199; /*ROSA MAIS CLARO*/
-    --supportColor1: #e602e6; /*ROSA CLARO*/
-    --supportColor2: #48c902; /*VERDE CLARO*/
-  }
-
-  h1{
-    color: white;
-    font-size: 3.2rem;
+  --primaryColor: #4d004d; /*ROSA ESCURO*/
+  --secondaryColor: #349400; /*VERDE ESCURO*/
+  --tertiaryColor: #990199; /*ROSA MAIS CLARO*/
+  --supportColor1: #e602e6; /*ROSA CLARO*/
+  --supportColor2: #48c902; /*VERDE CLARO*/
 }
-
-p{
+h1 {
   color: white;
-	font-size: 1.7rem;
-	margin: 0;
+  font-size: 3.2rem;
+}
+p {
+  color: white;
+  font-size: 1.7rem;
+  margin: 0;
   text-align: justify;
 }
-
-.sessao1{
-    background-image: url(/images/chalkboardgreen.png);
-    width: 100%;
-    height: 100vh;
-    text-align: center;
-    justify-content: center;  
+.sessao1 {
+  background-image: url("../images/chalkboardgreen.png");
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  justify-content: center;
 }
-
-.bloco1sessao1{
+.bloco1sessao1 {
   height: 100%;
   width: auto;
   display: flex;
@@ -34,41 +30,33 @@ p{
   align-items: center;
   justify-content: center;
 }
-
-.bloco{
+.bloco {
   width: 100%;
   max-width: 60rem;
 }
-
-.ptutor{
+.ptutor {
   font-size: 1.9rem;
 }
-
-.h1tutor{
+.h1tutor {
   text-align: left;
 }
-
-.bloco1sessao1 > img{
+.bloco1sessao1 > img {
   width: 30rem;
   height: 30rem;
 }
-
- img:hover{
+img:hover {
   transition: .7s;
   transform: scale(0.9);
-
 }
-
 .sessao2 {
-    background-image: #FFFFFF;
-    width: 100%;
-    height: 100vh;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid black;
+  background-image: #FFFFFF;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
 }
-
 .benefits {
   height: 100%;
   width: 100%;
@@ -76,15 +64,12 @@ p{
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
 }
-
 .benefits > h1 {
   color: #4d004d;
   text-align: center;
 }
-
-.blocobenefits{
+.blocobenefits {
   width: 100%;
   height: auto;
   display: flex;
@@ -92,8 +77,7 @@ p{
   flex-wrap: wrap;
   justify-content: center;
 }
-
-.cardbenefits{
+.cardbenefits {
   width: 100%;
   max-width: 40rem;
   background-color: #990199;
@@ -104,24 +88,20 @@ p{
   margin: 2%;
   padding: 2%;
 }
-
-.cardbenefits > h2{
+.cardbenefits > h2 {
   font-size: 2.5rem;
   color: white;
 }
-
 .cardbenefits > p {
   text-align: justify;
 }
-
-.cardbenefits:hover{
+.cardbenefits:hover {
   background-color: #4d004d;
   transition: .5s;
   transform: scale(1.1);
   background-position: -70px;
 }
-
-@media screen and (max-width: 960px){
+@media screen and (max-width: 960px) {
   .sessao2 {
     width: 100%;
     height: 100%;
