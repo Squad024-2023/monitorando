@@ -7,6 +7,8 @@ Arthur Bernard Pereira Freitas </br>
 Angelo Antonio Germano Rodrigues  </br> 
 Bruno Vilhena Ribeiro </br> 
 Bruno Perez Zeghir Dias  </br> 
+Para visualizar o site acesse:https://squad002-2023.github.io/index.html
+</br>
 </p>
 
 Repositório referente à primeira entrega do projeto monitorando da Squad 02</br> 
