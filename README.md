@@ -1,12 +1,13 @@
 # monitorando
-Squad 02
-líder: Kauã Alves
-Vice-líder: Arthur Freitas
-Kauã
-Arthur
-Angelo
-Bruno
-Bruno
+##Squad 02
+###líder: Kauã Alves | 
+###Vice-líder: Arthur Freitas | 
+<p>Kauã  
+Arthur  
+Angelo  
+Bruno  
+Bruno  
+</p>
 
 Repositório referente à primeira entrega do projeto monitorando da Squad 02
 Banco de Dados
