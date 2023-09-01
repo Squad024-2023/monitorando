@@ -168,3 +168,15 @@ p {
   font-weight: bold;
   color: var(--tertiaryColor);
 }
+.cards:nth-child(2) {
+  transition-delay: 200ms;
+}
+.cards:nth-child(3) {
+  transition-delay: 400ms;
+}
+.cards:nth-child(4) {
+  transition-delay: 600ms;
+}
+.cards:nth-child(5) {
+  transition-delay: 800ms;
+}

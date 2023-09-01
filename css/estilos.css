@@ -315,3 +315,29 @@ footer > div {
   justify-content: center;
   align-items: center;
 }
+.ani {
+  filter: blur(5px);
+  transform: scale(0);
+  opacity: 0;
+  transition: ease-in-out 1s;
+}
+.animate {
+  filter: blur(0);
+  transform: scale(1);
+  opacity: 1;
+}
+.ani2 {
+  opacity: 0;
+  transition: ease-in-out 1s;
+}
+.animate2 {
+  opacity: 1;
+}
+@media(prefers-reduced-motion) {
+  .ani {
+    transition: none;
+  }
+  .ani2 {
+    transition: none;
+  }
+}
