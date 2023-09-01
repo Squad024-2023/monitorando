@@ -2,7 +2,7 @@
 ## Squad 02
 ### líder: Kauã Alves 
 ### Vice-líder: Arthur Freitas
-<p> Kauã Alves de Melo
+<p> Kauã Alves de Melo</br>
 Arthur Bernard Pereira Freitas </br> 
 Angelo Antonio Germano Rodrigues  </br> 
 Bruno Vilhena Ribeiro </br> 
