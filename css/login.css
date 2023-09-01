@@ -11,7 +11,7 @@
   flex-wrap: wrap;
   align-items: center;
   background-image: url("../images/chalkboardlighterpink.png");
-		background-size: cover;
+  background-size: cover;
 }
 h1 {
   font-size: 4rem;
@@ -30,7 +30,7 @@ p {
   max-width: 40rem;
   background: white;
   border-radius: 0.5rem;
-  box-shadow: 0 0 1.5rem rbga(0, 0, 0, 0.3);
+  box-shadow: 0.1rem 0.1rem 0.5rem 0.1rem #0000003a;
 }
 .switch {
   position: absolute;
@@ -143,7 +143,7 @@ input::placeholder {
   margin-top: 1rem;
   margin-bottom: 5rem;
   cursor: pointer;
-  box-shadow: 0.2rem 0.2rem 0.8rem 0.1rem #0000003a;
+  box-shadow: 0.1rem 0.1rem 0.5rem 0.1rem #0000003a;
 }
 #btn, lBtnG, #lBtnF, #cBtnG, #cBtnF:active {
   transform: scale(1.01);
@@ -155,7 +155,7 @@ input::placeholder {
   color: var(--primaryColor);
 }
 #lBtnG, #lBtnF, #cBtnG, #cBtnF {
-	color: var(--primaryColor);
+  color: var(--primaryColor);
   padding: 0.5rem 2.5rem;
   background: transparent;
   height: 5rem;
