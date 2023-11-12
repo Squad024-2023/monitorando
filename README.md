@@ -4,9 +4,9 @@
 ### Vice-líder: Arthur Freitas
 <p> Kauã Alves de Melo</br>
 Arthur Bernard Pereira Freitas </br> 
-Angelo Antonio Germano Rodrigues  </br> 
-Bruno Vilhena Ribeiro </br> 
-Bruno Perez Zeghir Dias  </br> 
+ </br> 
+ </br> 
+ </br> 
 Para visualizar o site acesse:https://squad002-2023.github.io/index.html
 </br>
 </p>
