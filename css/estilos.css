@@ -260,13 +260,15 @@ header {
 }
 footer {
   width: 100%;
-  color: var(--primaryColor);
+  color: black;
   background-color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 1rem;
-  border-top: 1px solid var(--tertiaryColor);
+  border-top: 1px solid black;
+  padding-top: 30px;
+  padding-bottom: 10px;
 }
 .footerCentro {
   display: flex;
@@ -274,14 +276,14 @@ footer {
   flex-wrap: wrap;
   padding: 1rem;
   gap: 2rem;
-  border-bottom: 1px solid var(--tertiaryColor);
+  
 }
 footer > div {
   width: 100%;
   color: inherit;
 }
 .contatos {
-  width: 30rem;
+  width: 20rem;
   color: inherit;
   display: flex;
   flex-direction: column;
@@ -290,10 +292,10 @@ footer > div {
   color: inherit;
   font-size: 1.2rem;
   font-weight: bold;
-  text-align: right;
+  text-align: left;
 }
 .sociais {
-  width: 30rem;
+  width: 20rem;
   color: inherit;
   display: flex;
   flex-direction: column;
@@ -314,6 +316,7 @@ footer > div {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 10px;
 }
 .ani {
   filter: blur(5px);
