@@ -17,28 +17,25 @@ prof_matricula int auto_increment primary key,
 prof_nome varchar(255),
 prof_telefone varchar(255),
 prof_email varchar(255),
-cod_disc int not null,
-foreign key(cod_disc)references disciplinas(cod_disc)
+prof_senha varchar(255)
 );
 
-insert into professores(prof_nome, prof_telefone, prof_email, cod_disc)
-values ('Zeka','123456','zeka@hotmail.com', 1);
-insert into professores(prof_nome, prof_telefone, prof_email, cod_disc)
-values ('Zeka','123456','zeka@hotmail.com', 2);
-insert into professores(prof_nome, prof_telefone, prof_email, cod_disc)
-values ('Zeka','123456','zeka@hotmail.com', 3);
+insert into professores(prof_nome, prof_telefone, prof_email)
+values ('Zeka','123456','zeka@hotmail.com');
+insert into professores(prof_nome, prof_telefone, prof_email)
+values ('Zeka','123456','zeka@hotmail.com');
+insert into professores(prof_nome, prof_telefone, prof_email)
+values ('Zeka','123456','zeka@hotmail.com');
 select * from professores;
 
 create table turmas(
 cod_turma int auto_increment primary key,
 turma_tipo varchar(255),
-turma_data datetime,
-prof_matricula int not null,
-foreign key(prof_matricula)references professores(prof_matricula)
+turma_data datetime
 );
 
 insert into turmas(turma_tipo, turma_data, prof_matricula)
-values('individual', '2011-12-18 13:17:17', 1);
+values('individual', '2011-12-18 13:17:17');
 select * from turmas;
 
 create table alunos(
@@ -46,10 +43,24 @@ alu_matricula int auto_increment primary key,
 alu_nome varchar(255),
 alu_telefone varchar(255),
 alu_email varchar(255),
-cod_turma int not null,
-foreign key(cod_turma)references turmas(cod_turma)
+alu_senha varchar(255)
 );
 
 insert into alunos(alu_nome, alu_telefone, alu_email)
 values('zezin', '123456', 'zezin@hotmail.com');
 select * from alunos;
+
+create table aluno_turma(
+alu_matricula int not null,
+cod_turma int not null,
+foreign key(alu_matricula)references alunos(alu_matricula),
+foreign key(cod_turma)references turmas(cod_turma)
+);
+
+create table turma_professor(
+prof_matricula int not null,
+cod_turma int not null,
+foreign key(prof_matricula)references professores(prof_matricula),
+foreign key(cod_turma)references turmas(cod_turma)
+);
+

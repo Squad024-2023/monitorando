@@ -1,19 +1,13 @@
-/* CSS Document */ :root {
-    --primaryColor: #4d004d; /*ROSA ESCURO*/
-    --secondaryColor: #349400; /*VERDE ESCURO*/
-    --tertiaryColor: #990199; /*ROSA MAIS CLARO*/
-    --supportColor1: #e602e6; /*ROSA CLARO*/
-    --supportColor2: #48c902; /*VERDE CLARO*/
-  }
-
-  .perfil{
-    border: solid 1px red;
-    width: 40rem;
-    height: 40rem;
-    border-radius: 0.5rem;
-  }
-  .sessao1{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+/* CSS Document */
+:root {
+    --primaryColor: #4d004d;
+    /*ROSA ESCURO*/
+    --secondaryColor: #349400;
+    /*VERDE ESCURO*/
+    --tertiaryColor: #990199;
+    /*ROSA MAIS CLARO*/
+    --supportColor1: #e602e6;
+    /*ROSA CLARO*/
+    --supportColor2: #48c902;
+    /*VERDE CLARO*/
   }

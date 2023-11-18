@@ -165,6 +165,14 @@ object-fit: contain;
     height: 3rem;
   }
 }
+@media screen and (max-width:43em){
+.logo > spam{
+  font-size: 3rem;
+}
+.logoimg{
+  height: 1.8rem;
+}
+}
 .mask {
   -webkit-transition: opacity 300ms;
   -moz-transition: opacity 300ms;
