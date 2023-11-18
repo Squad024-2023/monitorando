@@ -79,7 +79,7 @@ a {
   user-select: none;
 }
 /*Controlando a responsividade para telas menores*/
-@media screen and (min-width: 58em) {
+@media screen and (min-width: 56em) {
   .js .nav-collapse {
     position: relative;
   }
@@ -107,28 +107,63 @@ section {
 }
 header {
   background-color: white;
-  position: fixed;
+  position: relative;
   z-index: 3;
   width: 100%;
   left: 0;
   top: 0;
   border-bottom: solid 2px var(--primaryColor);
-  margin-top: 0.5rem;
   box-shadow: 0.1rem 0.6rem 0.8rem 0.5rem #0000003a;
+  display: flex;
+  flex-wrap: wrap;
+justify-content: space-between;
 }
-@media screen and (min-width: 58em) {
+@media screen and (min-width: 56em) {
   header {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
   }
 }
 .logo {
-  text-decoration: none;
-  font: 600 2rem "Sun Seed";
-  line-height: 45px;
-  padding: 0 20px;
-  color: var(--tertiaryColor);
+  display: block;
+}
+.logo > spam{
+  font: 600 5rem "Sun Seed";
+  color: var(--primaryColor);
+  font-size: 5rem;
+}
+
+.logoimg{
+height: 3rem;
+margin-right: 0.1rem;
+object-fit: contain;
+}
+@media screen and (max-width: 72em) {
+  .logo {
+    display: block;
+  }
+  .logo > spam{
+    display: none;
+  }
+  .logoimg{
+    height: 4rem;
+  }
+}
+@media screen and (max-width: 55.99em) {
+  .logo {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    padding-left: 1rem;
+  }
+  .logo > spam{
+    display: flex;
+    font-size: 5rem;
+  }
+  .logoimg{
+    height: 3rem;
+  }
 }
 .mask {
   -webkit-transition: opacity 300ms;
@@ -142,7 +177,7 @@ header {
   bottom: 0;
   right: 0;
   left: 0;
-  top: 0;
+  top: 5px;
 }
 .android .mask {
   -webkit-transition: none;
@@ -152,7 +187,7 @@ header {
   visibility: visible;
   opacity: 1;
 }
-@media screen and (min-width: 58em) {
+@media screen and (min-width: 56em) {
   .mask {
     display: none !important;
     opacity: 0 !important;
@@ -175,7 +210,7 @@ header {
   width: 100%;
   float: left;
 }
-@media screen and (min-width: 58em) {
+@media screen and (min-width: 56em) {
   .nav-collapse {
     float: right;
     width: auto;
@@ -184,8 +219,10 @@ header {
 .nav-collapse li {
   float: left;
   width: 100%;
+  height: 60px;
+  border-left: solid 2px var(--primaryColor);
 }
-@media screen and (min-width: 58em) {
+@media screen and (min-width: 56em) {
   .nav-collapse li {
     width: auto;
   }
@@ -193,17 +230,15 @@ header {
 .nav-collapse a {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   border-top: 1px solid var(--tertiaryColor);
-  ;
   text-decoration: none;
   background: white;
   padding: 0.7em 1em;
   font-weight: 700;
-  border-left: solid 2px var(--primaryColor);
-  color: var(--tertiaryColor);
+  color: var(--primaryColor);
   width: 100%;
+  height: 60px;
   float: left;
   font-size: 1.5rem;
-  height: 45px;
   display: flex;
   align-items: center;
 }
@@ -211,7 +246,7 @@ header {
   background-color: var(--primaryColor);
   color: white;
 }
-@media screen and (min-width: 58em) {
+@media screen and (min-width: 56em) {
   .nav-collapse a {
     padding: 1.02em 2em;
     text-align: center;
@@ -224,7 +259,7 @@ header {
   background: var(--primaryColor);
   padding-left: 2em;
 }
-@media screen and (min-width: 58em) {
+@media screen and (min-width: 56em) {
   .nav-collapse ul ul a {
     display: none;
   }
@@ -238,24 +273,24 @@ header {
   position: relative;
   overflow: hidden;
   width: 60px;
-  height: 45px;
+  height: 50px;
   float: right;
   align-items: center;
 }
 .nav-toggle:before {
   color: var(--tertiaryColor); /*Cor do ícone*/
-  font: normal 40px/55px "Sun Seed"; /*Editar o primeiro número muda o tamanho do ícone*/
+  font: normal 50px/55px "Sun Seed"; /*Editar o primeiro número muda o tamanho do ícone*/
   text-transform: none;
   position: absolute;
   content: "\2261"; /* Hamburger icon */
   text-indent: 0;
   speak: none;
   width: 100%;
-  left: 0;
-  top: -5px;
+  left: 20px;
+  top: 0;
 }
 .nav-toggle.active:before {
-  font-size: 24px;
+  font-size: 40px;
   content: "\78"; /* Close icon */
 }
 footer {
@@ -281,7 +316,7 @@ footer > div {
   color: inherit;
 }
 .contatos {
-  width: 30rem;
+  width: 20rem;
   color: inherit;
   display: flex;
   flex-direction: column;
@@ -293,7 +328,7 @@ footer > div {
   text-align: right;
 }
 .sociais {
-  width: 30rem;
+  width: 20rem;
   color: inherit;
   display: flex;
   flex-direction: column;
