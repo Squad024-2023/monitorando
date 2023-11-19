@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Perfil</title>
+  <title>CRUD</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="css/estilos.css">
   <link rel="stylesheet" href="css/perfil.css">
@@ -27,15 +27,32 @@
     </nav>
   </header>
   <section class="sessao1">
-    <h1>PERFIL</h1>
-    <form class="perfil">
-      <label for="nome"><input type="text" name="nome" value="dale" readonly>Nome</label>
-      <label for="telefone"><input type="text" name="telefone"value="dale" readonly>Telefone</label>
-      <label for="email"><input type="text" name="email"value="dale" readonly>E-mail</label>
+    <h1>CRUD</h1>
+    <form class="crud">
+        <table>
+            <tr>
+                <th>TABELAS</th>
+                <th>CREATE</th>
+                <th>READ</th>
+            </tr>
+            <tr>
+                <td>Alunos</td>
+                <td><button class="edit" id="editar" type="button"><img src="icons/edit-32-32.svg">Editar Perfil</button></td>
+                <td><button class="delete" id="deletarp" type="button"><img src="icons/delete-32-32.svg">Deletar Perfil</button></td>
+
+            </tr>
+            <tr>
+
+            </tr>
+            <tr>
+
+            </tr>
       <div class="buttons">
       <button class="edit" id="editar" type="button"><img src="icons/edit-32-32.svg">Editar Perfil</button>
       <button class="delete" id="deletarp" type="button"><img src="icons/delete-32-32.svg">Deletar Perfil</button>
     </div>
+    </table>
+
     </form>
     <div class="modal-container" id="modal_container">
       <div class="modal">
@@ -55,10 +72,10 @@
         <h1>DELETAR PERFIL</h1>
         <button class="fechar" id="fechar2">&#x2716;</button>
         <h2>Deseja mesmo deletar seu perfil?</h2>
-        <form class="buttons">
+        <div class="buttons">
           <a href="" id="confirmar">Confirmar</a>
           <button id="voltar">Voltar</button>
-        </form>
+        </div>
         </form>
       </div>
     </div>

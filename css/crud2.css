@@ -1,109 +1,118 @@
-/* CSS Document */ :root {
-  --primaryColor: #4d004d; /*ROSA ESCURO*/
-  --secondaryColor: #349400;/*VERDE ESCURO*/
-  --tertiaryColor: #990199; /*ROSA MAIS CLARO*/
-  --supportColor1: #e602e6; /*ROSA CLARO*/
-  --supportColor2: #48c902; /*VERDE CLARO*/
+/* CSS Document */
+:root {
+  --primaryColor: #4d004d;
+  /*ROSA ESCURO*/
+  --secondaryColor: #349400;
+  /*VERDE ESCURO*/
+  --tertiaryColor: #990199;
+  /*ROSA MAIS CLARO*/
+  --supportColor1: #e602e6;
+  /*ROSA CLARO*/
+  --supportColor2: #48c902;
+  /*VERDE CLARO*/
 }
 .sessao1 {
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  flex-direction: column;
   align-items: center;
-  background-image: url("../images/chalkboarddarkpink.png");
-  background-size: cover;
+  background-image: url(../images/chalkboarddarkpink.png);
+  padding-top: 10rem;
 }
-h1 {
-  font-size: 4rem;
-  color: inherit;
+h1{
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: white;
+  margin-bottom: 10rem;
 }
-p {
+/*READ CSS*/
+table {
+  background-color: white;
+  border-collapse: collapse;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+tr{
+  margin: 2rem;
+  border-bottom: solid 5px var(--primaryColor);
+}
+th {
+  color: var(--primaryColor);
+  text-align: center;
   font-size: 2rem;
-  margin: 0;
-  color: inherit;
+  line-height: 4rem;
+  text-transform: uppercase;
+  padding: 0.5rem 1rem;
+  border: solid 1px var(--primaryColor);
 }
+@media screen and (max-width: 76em) {
+th{
+  font-size: 2rem;
+}
+}
+@media screen and (max-width: 60em) {
+  th{
+   line-height: normal;
+  }
+  }
+td {
+  color: var(--primaryColor);
+  text-align: center;
+  font-size: 1.5rem;
+  padding:0.5rem;
+  border-left: solid 1px var(--primaryColor);
+}
+.editar {
+  padding:0.5rem;
+  padding-left: 1rem;
+  cursor: pointer;
+  transition: ease 0.3s;
+  background-color: var(--supportColor2);
+}
+.deletarp {
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: ease 0.3s;
+  background-color: darkred;
+}
+td>button>img {
+  width: 32px;
+  height: 32px;
+}
+.deletarp:hover {
+  transform: scale(1.05)
+}
+.editar:hover {
+  transform: scale(1.05)
+}
+
+
+/*CREATE CSS*/
 .container {
-  width: 120000px;
   position: relative;
   align-items: center;
   padding: 2rem 3rem;
+  width: 90%;
+  max-width: 40rem;
   background: white;
   border-radius: 0.5rem;
   box-shadow: 0.1rem 0.1rem 0.5rem 0.1rem #0000003a;
 }
-.switch {
-  position: absolute;
-  right: 3rem;
-  display: flex;
-  border-bottom: 1px solid var(--supportColor2);
-}
-.switch.active {
-  border-bottom: 1px solid var(--supportColor1);
-}
-.switch:after {
-  content: '';
-  height: 0.5rem;
-  width: 7rem;
-  background: var(--supportColor2);
-  border-radius: 6rem 6rem 0 0;
-  position: absolute;
-  bottom: 0;
-  transition: 0.3s ease;
-}
-.switch.active:after {
-  left: 6.5rem;
-  width: 8.5rem;
-  background: var(--supportColor1);
-}
-.login {
-  font-weight: bold;
-  color: white;
-  padding: 0.5rem 1.2rem;
-  background-color: var(--supportColor2);
-  margin-bottom: 1rem;
-  border-radius: 0.5rem;
-  text-align: right;
-  margin-left: 0.5rem;
-  letter-spacing: 1px;
-  cursor: pointer;
-  transition: 0.3s ease;
-  box-shadow: 0 2px 4px #0000004a;
-}
-.cadastro {
-  font-weight: bold;
-  color: var(--primaryColor);
-  padding: 0.5rem 1.2rem;
-  margin-bottom: 1rem;
-  border-radius: 0.5rem;
-  text-align: right;
-  margin-left: 0.5rem;
-  letter-spacing: 1px;
-  cursor: pointer;
-  transition: 0.3s ease;
-  box-shadow: 0 2px 4px #0000004a;
-}
 .container .outer {
   width: 100%;
-  margin-top: 4rem;
   text-align: center;
   position: relative;
-  overflow: hidden;
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 0 2rem;
 }
-.outer #form {
-  width: 200%;
-  position: relative;
-  display: flex;
-  margin: auto;
-  transition: 0.2s ease-in-out;
-}
+
 #page {
   margin: auto;
   width: 100%;
-  height: 600px;
-  min-width: 20rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+justify-content: center;
 }
 label {
   display: block;
@@ -111,7 +120,7 @@ label {
   padding: 1rem 1.5rem;
   text-align: center;
   letter-spacing: 2px;
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: var(--primaryColor);
   font-weight: bold;
   text-transform: uppercase;
@@ -125,7 +134,7 @@ label {
   border-radius: 0.5rem;
   margin-bottom: 1rem;
   border: 1px solid var(--primaryColor);
-  padding-left: 4rem;
+  padding-left: 2rem;
   font-size: 2rem;
   letter-spacing: 1px;
 }
@@ -209,13 +218,4 @@ input[type="radio"]{
     height: 1rem;
     width: 1rem;
   }
-  }
-  @media screen and (max-width: 20rem) {
-    .radio > *{
-      font-size: 1rem;
-    }
-    input[type="radio"]{
-      height: 1rem;
-      width: 1rem;
-    }
   }

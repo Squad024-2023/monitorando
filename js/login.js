@@ -19,5 +19,6 @@ function tab1() {
   cadastro.style.background = "none";
   cadastro.style.color = "#4d004d";
   login.style.background = "#48c902";
+  login.style.color = "#ffffff";
   switchs[current - 1].classList.remove("active");
 }
