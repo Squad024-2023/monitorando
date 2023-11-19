@@ -139,7 +139,8 @@ height: 3rem;
 margin-right: 0.1rem;
 object-fit: contain;
 }
-@media screen and (max-width: 72em) {
+@media screen and (max-width: 78em) {
+  /*76em padrao sem o botao adm*/
   .logo {
     display: block;
   }
@@ -254,7 +255,8 @@ object-fit: contain;
   background-color: var(--primaryColor);
   color: white;
 }
-@media screen and (min-width: 56em) {
+@media screen and (min-width: 60.5em) {
+  /*56 padrao sem o botao adm*/
   .nav-collapse a {
     padding: 1.02em 2em;
     text-align: center;

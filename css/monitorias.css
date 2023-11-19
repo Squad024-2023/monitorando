@@ -138,6 +138,7 @@ h2 {
 .textoP > h3 {
   color: white;
   font-size: 2rem;
+  padding: 0.5rem;
 }
 .textoP > span, h3 {
   padding: 0 1rem;

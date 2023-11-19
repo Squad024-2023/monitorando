@@ -23,7 +23,8 @@ p {
   color: inherit;
 }
 .container {
-  width: 120000px;
+  width: 90%;
+  max-width: 40rem;
   position: relative;
   align-items: center;
   padding: 2rem 3rem;
@@ -218,4 +219,7 @@ input[type="radio"]{
       height: 1rem;
       width: 1rem;
     }
+  }
+  input:focus{
+    outline: solid 1px var(--primaryColor);
   }

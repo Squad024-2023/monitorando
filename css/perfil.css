@@ -25,6 +25,7 @@
   align-items: center;
   background-image: url(../images/chalkboardgreen.png);
   background-size: cover;
+  padding: 10rem 0;
 
 }
 
@@ -216,4 +217,7 @@ input::placeholder {
 }
 #confirmar:hover, #voltar:hover{
   transform: scale(1.05)
+}
+input:focus{
+  outline: solid 1px var(--primaryColor);
 }
