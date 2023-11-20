@@ -52,7 +52,7 @@ td {
   text-align: center;
   font-size: clamp(1rem, 2vw, 2.5rem);
 line-height: clamp(1.5rem, 2vh, 3rem);
-padding: 0.5rem;
+padding: 0.5rem 1rem;
   border-left: solid 1px var(--primaryColor);
 }
 .editar {
@@ -216,6 +216,21 @@ input[type="radio"]{
   }
   }
 
+.checkbox{
+	display: flex;
+	padding: 0.5rem;
+	align-items: center;
+}
+.checkbox>label{
+	font-size: 1.5rem;
+}
+input[type=radio]{
+	width: 20px;
+	margin-top: 0.5rem;
+}
+input[type=radio]:focus{
+	outline: none;
+}
   /*UPDATE CSS*/
   .editarForm{
     width: 90%;
@@ -231,7 +246,6 @@ input[type="radio"]{
     display: flex;
     flex-direction: column-reverse;
     align-items: flex-start;
-    
   }
   .editarForm > label >input{
     height: 3.5rem;
@@ -259,4 +273,7 @@ input[type="radio"]{
   }
   #salvar:hover{
     transform: scale(1.05);
+  }
+  .professor{
+	  text-align: left;
   }

@@ -17,12 +17,12 @@
     </a>
     <nav class="nav-collapse">
       <ul>
-        <li class="menu-item"><a href="index.html" data-scroll>Home</a></li>
-        <li class="menu-item"><a href="monitorias.html" data-scroll>Monitorias</a></li>
-        <li class="menu-item"><a href="tutor.html" data-scroll>Torne-se um Tutor</a></li>
-        <li class="menu-item"><a href="quem.html" data-scroll>Quem Somos</a></li>
-        <li class="menu-item"><a href="login.html" data-scroll>Login</a></li>
-        <li class="menu-item"><a th:href="crud.html" data-scroll>ADM</a></li>
+        <li class="menu-item"><a th:href="@{/index.html}" data-scroll>Home</a></li>
+        <li class="menu-item"><a th:href="@{/monitorias.html}" data-scroll>Monitorias</a></li>
+        <li class="menu-item"><a th:href="@{/tutor.html}" data-scroll>Torne-se um Tutor</a></li>
+        <li class="menu-item"><a th:href="@{/quem.html}" data-scroll>Quem Somos</a></li>
+        <li class="menu-item"><a th:href="@{/login.html}" data-scroll>Login</a></li>
+        <li class="menu-item"><a th:href="@{/crud.html}" data-scroll>ADM</a></li>
       </ul>
     </nav>
   </header>
@@ -40,11 +40,11 @@
   <footer>
     <div class="footerCentro">
       <div class="contatos"><span>Mapa do site:</span>
-        <span><a href="index.html">Home</a></span>
-        <span><a href="monitorias.html">Monitorias</a></span>
-        <span><a href="tutor.html">Torne-se um Tutor</a></span>
-        <span><a href="quem.html">Quem somos</a></span>
-        <span><a href="login.html">Login</a></span></div>
+        <span><a th:href="@{/index.html}">Home</a></span>
+        <span><a th:href="@{/monitorias.html}">Monitorias</a></span>
+        <span><a th:href="@{/tutor.html}">Torne-se um Tutor</a></span>
+        <span><a th:href="@{/quem.html}">Quem somos</a></span>
+        <span><a th:href="@{/login.html}">Login</a></span></div>
       <div class="contatos"><span>CONTATO</span><span>E-mail: monitorando@gmail.com</span><span>Telefone: 11 9 7233-5888</span></div>
       <div class="contatos"><span>SQUAD 24</span>
       <span><a href="https://www.linkedin.com/in/ber-arthur/">Arthur Bernard</a></span>

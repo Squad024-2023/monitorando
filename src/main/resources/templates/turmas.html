@@ -34,21 +34,17 @@
           <th>Código da Turma</th>
           <th>Tipo da Turma</th>
           <th>Data e Hora da Aula</th>
+          <th>Professores</th>
         </tr>
-        <tr>
-          <td>0123</td>
-          <td>Individual</td>
-          <td>16:30 12/12/2023</td>
-          <td><button class="editar" id="editar" type="button"><img src="/icons/edit-32-32.svg"></button></td>
-        <td><button class="deletarp" id="deletarp" type="button"><img src="/icons/delete-32-32.svg"></button></td>
+        <tr th:each="turma : ${turma}">
+					<td th:text="${turma.codTurma}"></td>
+					<td th:text="${turma.tipoTurma}"></td>
+					<td th:text="${turma.dataTurma}"></td>
+					<td th:text="${#strings.arrayJoin(turma.professores.![profNome], ', ')}"></td>
+          
+          <td class="editar"><a id="editar" th:href="@{/turmas/editar/{codTurma}(codTurma=${turma.codTurma})}"><img src="/icons/edit-32-32.svg"></a></td>
+        <td class="deletarp"><a id="deletarp" th:href="@{/turmas/deletar/{codTurma}(codTurma=${turma.codTurma})}"><img src="/icons/delete-32-32.svg"></a></td>
         </tr>
-        <tr>
-            <td>0124</td>
-            <td>Coletiva</td>
-            <td>17:00 21/12/2023</td>
-            <td><button class="editar" id="editar" type="button"><img src="/icons/edit-32-32.svg"></button></td>
-          <td><button class="deletarp" id="deletarp" type="button"><img src="/icons/delete-32-32.svg"></button></td>
-          </tr>
       </table>
     </form>
   </section>

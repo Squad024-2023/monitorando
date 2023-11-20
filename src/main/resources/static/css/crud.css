@@ -42,7 +42,8 @@ h2{
   margin: 5rem;
 }
 .crud {
-  max-width: 80rem;
+width: 80%;
+max-width: 60rem;
   display: flex;
   flex-direction: column;
   justify-content: center;

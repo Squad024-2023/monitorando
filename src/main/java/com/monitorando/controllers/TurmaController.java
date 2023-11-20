@@ -32,7 +32,7 @@ public class TurmaController {
 	public String listarTurmas(Model model) {
 		List<Turma> turma = turmaService.getAllTurmas();
 		model.addAttribute("turma", turma);
-		return "ListarTurmas";
+		return "turmas";
 
 	}
 
@@ -42,7 +42,7 @@ public class TurmaController {
 		List<Professor> professores = professorService.getAllProfessores();
 		model.addAttribute("turma", turma);
 		model.addAttribute("professores", professores);
-		return "TurmaForm";
+		return "createTurma";
 
 	}
 
@@ -59,7 +59,7 @@ public class TurmaController {
 		Turma turma = turmaService.getTurmaById(codTurma);
 		model.addAttribute("turma", turma);
 		model.addAttribute("professores", professorService.getAllProfessores());
-		return "editarTurma";
+		return "updateTurma";
 	}
 
 	@PostMapping("/editar/{codTurma}")
