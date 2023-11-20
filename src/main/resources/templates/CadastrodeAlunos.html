@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+  <head>
+    <title>Cadastro de Alunos</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+		integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="/css/CadastrodeAlunos.css">
+
+  </head>
+  
+  <body>
+	  	<nav>
+		<a th:href="@{/}"></a>
+		<a class="navbar-brand text-light" th:href="@{/alunos}">Listagem de Alunos</a>
+		<a class="navbar-brand text-light" th:href="@{/turmas}">Listagem de Turmas</a>
+		<a class="navbar-brand text-light" th:href="@{/professores}">Listagem de Professores</a>
+	</nav>
+	
+	<div class="titulo">
+	   <h2>Cadastrar Novo Aluno</h2>
+       </div>
+
+       <section>
+    	<form th:action="@{/alunos/salvar}" th:object="${alunos}" method="post">
+		<div class="edit">
+			<label for="alu_nome"> Nome: </label><br>
+			<input class="inputs" type="text" id="alu_nome" th:field="*{alu_nome}" />
+		</div>
+		<div>
+			<label for="alu_telefone"> Telefone: </label><br>
+			<input class="inputs" type="text" id="alu_telefone" th:field="*{alu_telefone}" />
+		</div>
+		<div>
+			<label for="alu_email"> E-mail: </label><br>
+			<input class="inputs" type="email" id="alu_email" th:field="*{alu_email}" />
+		</div>
+		<div>
+			<label for="alu_telefone"> Senha: </label><br>
+			<input class="inputs" type="password" id="alu_senha" th:field="*{alu_senha}" />
+		</div>
+		<div>
+        <label for="cod_turma">Selecione as Turmas:</label>
+        <select multiple="multiple" class="form-control" id="cod_turma" name="cod_turma">
+    <option th:each="turmas : ${turmas}" th:value="${turmas.cod_turma}" th:text="${turmas.cod_turma}"></option>
+</select>
+
+    </div>
+		<button type="submit" class="button-a">Salvar</button>
+	</form>
+    </section>
+  
+  </body>
+
+</html>

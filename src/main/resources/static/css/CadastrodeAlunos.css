@@ -1,0 +1,81 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(/images/ChalkboardAdm.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
+    background-size: cover;
+ } 
+
+ section {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+ }
+
+ nav {
+    display: flex;
+    background-color: #349400;
+    justify-content: space-around;
+    width: auto;
+    height: 4rem;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+ }
+
+h2 {
+    font-size: 2.5rem;
+}
+
+.titulo {
+    width: 100%;
+    height: 10rem;
+    gap: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #ffffff;
+  }
+
+.button-a {
+    width: 8rem;
+    height: 2rem;
+    font-size: 1rem;
+    margin-top: 1rem;
+    border-radius: 10rem;
+    background-color: #349400;
+    text-transform: uppercase;
+    font-size: 1rem;
+  }
+
+  form {
+    width: 40%;
+  }
+
+label {
+    font-size: 1.5rem;
+    color: #ffffff;
+  }
+
+input {
+    width: 100%;
+    height: 2.5rem;
+
+  }
+
+.inputs {
+	margin: 0 auto;
+	padding: 10px;
+	border: none;
+	margin-bottom: 10px;
+	border-radius: 50px;
+  }

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Listagem de Turmas</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/css/ListagemdeTurmas.css">
+</head>
+
+<body>
+    <nav>
+        <a th:href="@{/}"></a>
+        <a class="navbar-brand text-light" th:href="@{/alunos}">Listagem de Alunos</a>
+        <a class="navbar-brand text-light" th:href="@{/turmas}">Listagem de Turmas</a>
+        <a class="navbar-brand text-light" th:href="@{/professores}">Listagem de Professores</a>
+    </nav>
+
+    <div class="titulo">
+        <h2>Listagem de Turmas</h2>
+        <a th:href="@{/turmas/novo}">Criar Turma</a>
+    </div>
+
+    <section>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Código</th>
+                    <th>Tipo</th>
+                    <th>Data</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="turma : ${turmas}">
+                    <td th:text="${turma.cod_turma}"></td>
+                    <td th:text="${turma.turma_tipo}"></td>
+                    <td th:text="${#dates.format(turma.turma_data, 'dd/MM/yyyy')}"></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+</body>
+
+</html>

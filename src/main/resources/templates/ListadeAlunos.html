@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+  <head>
+    <title>Alunos</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+		integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/ListadeAlunos.css">
+        <style type="text/css"> .text {color: white;}</style> 
+
+  </head>
+  
+  <body>
+	  	<nav>
+		<a th:href="@{/}"></a>
+		<a class="navbar-brand text-light" th:href="@{/alunos}">Listagem de Alunos</a>
+		<a class="navbar-brand text-light" th:href="@{/turmas}">Listagem de Turmas</a>
+		<a class="navbar-brand text-light" th:href="@{/professores}">Listagem de Professores</a>
+	</nav>
+	
+    <div class="titulo">
+    <h2 class="text-center">Lista de Alunos</h2>
+    <div><a class="button-a" th:href="@{/alunos/novo}">Adicionar Alunos</a></div>
+    </div>
+    
+    <table class="table">
+		<thead>
+		<tr>
+			<th scope="col"> Matricula </th>
+			<th scope="col"> Nome </th>
+			<th scope="col"> Telefone </th>
+			<th scope="col"> E-mail </th>
+			<th scope="col"> Tipo de Turma </th>
+			<th scope="col"> Excluir </th>
+			<th scope="col"> Editar </th>
+		</tr>
+		 </thead>
+		<tr th:each="alunos : ${alunos}">
+			<td class="text" th:text="${alunos.alu_matricula}"></td>
+			<td class="text" th:text="${alunos.alu_nome}"></td>
+			<td class="text" th:text="${alunos.alu_telefone}"></td>
+			<td class="text" th:text="${alunos.alu_email}"></td>
+			<td>
+            <span class="text" th:each="turmas : ${alunos.turmas}">
+            <span class="text" th:text="${turmas.tipo_turma}"></span>
+        </span>
+    </td>
+              <td>
+			<a th:href="@{/alunos/editar/{alu_matricula}(alu_matricula=${alunos.alu_matricula})}">Editar</a>
+			</td>
+			<td>
+				<a th:href="@{/alunos/deletar/{alu_matricula}(alu_matricula=${alunos.alu_matricula})}">Excluir</a>
+			</td>
+			
+		</tr>
+	</table>
+  
+  </body>
+
+</html>

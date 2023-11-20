@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Cadastro de Turma</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+    <nav>
+        <a th:href="@{/}"></a>
+        <a class="navbar-brand text-light" th:href="@{/alunos}">Listagem de Alunos</a>
+        <a class="navbar-brand text-light" th:href="@{/turmas}">Listagem de Turmas</a>
+        <a class="navbar-brand text-light" th:href="@{/professores}">Listagem de Professores</a>
+    </nav>
+
+    <div class="titulo">
+        <h2>Cadastrar Nova Turma</h2>
+    </div>
+
+    <section>
+        <form th:action="@{/turmas/salvar}" th:object="${turmas}" method="post">
+            <div class="edit">
+                <label for="turma_tipo"> Tipo: </label><br>
+                <input type="text" id="turma_tipo" th:field="*{turma_tipo}" />
+            </div>
+            <div>
+                <label for="turmas_data"> Data: </label><br>
+                <input type="date" id="turma_data" th:field="*{turma_data}" />
+            </div>
+            <button type="submit" class="button-a">Salvar</button>
+        </form>
+    </section>
+
+</body>
+
+</html>
