@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Lista de Professores</title>
+	<!-- Link para o Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+		integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<a class="navbar-brand" th:href="@{/professores}">Listagem de Professores</a>
+		<a class="navbar-brand" th:href="@{/turmas}">Listagem de Turmas</a>
+	</nav>
+
+	<div class="container mt-3">
+		<h2>Lista de Turmas</h2>
+		<a class="btn btn-primary mb-2" th:href="@{/turmas/novo}">Adicionar Turma</a>
+		<table class="table">
+			<thead class="thead-light">
+				<tr>
+					<th>Cod Turma::</th>
+					<th>Tipo Turma::</th>
+					<th>Data Turma::</th>
+					<th>Professores::</th>
+					<th>Ações</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="turma : ${turma}">
+					<td th:text="${turma.codTurma}"></td>
+					<td th:text="${turma.tipoTurma}"></td>
+					<td th:text="${turma.dataTurma}"></td>
+					<td th:text="${#strings.arrayJoin(turma.professores.![profNome], ', ')}"></td>
+					<td>
+						<a class="btn btn-info btn-sm"
+							th:href="@{/turmas/editar/{codTurma}(id=${turma.codTurma})}">Editar</a>
+						<a class="btn btn-danger btn-sm"
+							th:href="@{/turmas/deletar/{codTurma}(id=${turma.codTurma})}">Excluir</a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+</body>
+
+</html>

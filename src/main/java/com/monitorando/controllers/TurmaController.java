@@ -42,7 +42,7 @@ public class TurmaController {
 		List<Professor> professores = professorService.getAllProfessores();
 		model.addAttribute("turma", turma);
 		model.addAttribute("professores", professores);
-		return "turmaForm";
+		return "TurmaForm";
 
 	}
 
@@ -54,24 +54,26 @@ public class TurmaController {
 		return "redirect:/turmas";
 	}
 
-	@GetMapping("/editar/{profMatricula}")
-	public String ShowUpdateForm(@PathVariable("profMatricula") Long profMatricula, Model model) {
-		Turma turma = turmaService.getTurmaById(profMatricula);
+	@GetMapping("/editar/{codTurma}")
+	public String ShowUpdateForm(@PathVariable("codTurma") Long codTurma, Model model) {
+		Turma turma = turmaService.getTurmaById(codTurma);
 		model.addAttribute("turma", turma);
 		model.addAttribute("professores", professorService.getAllProfessores());
 		return "editarTurma";
 	}
 
-	@PostMapping("/editar/{profMatricula}")
-	public String updateTurma(@PathVariable("ProfMatricula") Long profMatricula, @ModelAttribute("turma") Turma turma) {
-		turmaService.updateTurma(profMatricula, turma);
-		return "redirect:/turmas";
+	@PostMapping("/editar/{codTurma}")
+	public String updateTurma(@ModelAttribute("turma") Turma turma) {
+	    // Obtém o código da turma do objeto turma
+	    Long codTurma = turma.getCodTurma();
+	    turmaService.updateTurma(codTurma, turma);
+	    return "redirect:/turmas";
 	}
 
-	@GetMapping("/deletar/{profMatricula}")
-	public String deleteTurma(@PathVariable Long profMatricula) {
+	@GetMapping("/deletar/{codTurma}")
+	public String deleteTurma(@PathVariable Long codTurma) {
 
-		turmaService.deleteTurma(profMatricula);
+		turmaService.deleteTurma(codTurma);
 		return ("redirect:/turmas");
 	}
 

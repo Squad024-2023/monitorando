@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Formulário da Turma</title>
+	<!-- Link para o Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+		integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-lg navbar-lilght bg-light">
+		<a class="navbar-brand" th:href="@{/professores}">Listagem de Professores</a>
+		<a class="navbar-brand" th:href="@{/turmas}">Listagem de Turmas</a>
+	</nav>
+
+	<div class="container mt-3">
+		<h2>Cadastro de Turma</h2>
+		<form th:action="@{/turmas/save}" th:object="${turma}" method="post">
+			
+			<div class="form-group">
+				<label for="tipoTurma">Tipo Turma:</label>
+				<input type="text" id="tipoTurma" class="form-control" th:field="*{tipoTurma}" />
+			</div>
+			
+			<div class="form-group">
+				<label for="dataTurma">Data Turma:</label>
+				<input type="datetime-local" id="dataTurma" class="form-control" th:field="*{dataTurma}" />
+			</div>
+			
+			<div class="form-group">
+				<label> Professores:</label>
+				<div th:each="professor : ${professores}">
+					<div class="form-check">
+						 <input class="form-check-input" type="checkbox" id="professor-${professor.profMatricula}"
+                            name="professores" th:value="${professor.profMatricula}"
+                            th:checked="${turma.professores.contains(turma)}" />
+                        <label class="form-check-label" th:for="'professor-' + ${professor.profMatricula}"
+                            th:text="${professor.profNome}"></label>
+					</div>
+					
+				</div>
+			</div>
+			
+			
+			
+			<button type="submit" class="btn btn-primary">Salvar</button>
+		</form>
+	</div>
+
+
+</body>
+
+</html>
