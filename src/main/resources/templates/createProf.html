@@ -2,30 +2,15 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="utf-8">
-<title>Criar Professor/Aluno</title>
+<title>Criar Professor</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<link rel="stylesheet" href="../static/css/estilos.css">
-<link rel="stylesheet" href="../static/css/crud2.css">
-<script src="../static/js/responsive-nav.js"></script> 
-<link rel="icon" href="../static/icons/icon-page.png" type="image/x-icon"/>
-<script type="text/javascript">
-  function select()
-  {
-   var1=document.getElementById("aluno");
-   var2=document.getElementById("professor");
-   if(var1.checked==true)
-   {
-      document.createForm.action="";
-   }
-   else
-   {
-      document.createForm.action="";
-   }
- }
-</script>
+<link rel="stylesheet" href="/css/estilos.css">
+<link rel="stylesheet" href="/css/crud2.css">
+<script src="/js/responsive-nav.js"></script> 
+<link rel="icon" href="/icons/icon-page.png" type="image/x-icon"/>
 </head>
 <body>
-<header> <a href="index.html" class="logo" data-scroll><img class="logoimg" src="../static/icons/logo.png"><spam>onitorando</spam></a>
+<header> <a href="index.html" class="logo" data-scroll><img class="logoimg" src="/icons/logo.png"><spam>onitorando</spam></a>
   <nav class="nav-collapse">
     <ul>
       <li class="menu-item"><a href="index.html" data-scroll>Home</a></li>
@@ -40,28 +25,22 @@
 <section class="sessao1">
   <div class="container">
     <div class="outer">      
-          <form id="form" name="createForm"action="">
+          <form id="form" name="createForm" th:action="@{/professores/save}" th:object="${professor}" method="post">
           <div id="page">
-          <label>Cadastrar Usuário</label>
+          <label>Cadastrar Professor</label>
           <div class="element">
-            <input type="text" placeholder="Nome">
-          </div>
-          <div class="element">
-            <input type="text" placeholder="Telefone">
+            <input type="text" placeholder="Nome" required th:field="*{profNome}">
           </div>
           <div class="element">
-            <input type="text" placeholder="E-mail">
+            <input type="text" placeholder="Telefone" required th:field="*{profTelefone}">
           </div>
           <div class="element">
-            <input type="password" placeholder="Senha">
+            <input type="text" placeholder="E-mail" required th:field="*{profEmail}">
           </div>
-          <div class="radio">
-            <input type="radio" id="aluno" name="tipoUsuario" value="aluno">
-            <label for="aluno">Aluno</label>
-            <input type="radio" id="professor" name="tipoUsuario" value="professor">
-            <label for="professor">Professor</label>
+          <div class="element">
+            <input type="password" placeholder="Senha" required th:field="*{profSenha}">
           </div>
-          <button id="btn" formaction="./perfil.html">Registrar</button>
+          <button id="btn" type="submit">Registrar</button>
         </div>
       </form>
     </div>
@@ -84,14 +63,14 @@
     <span><a href="https://">Maristela Santos</a></span>
     <span><a href="https://www.linkedin.com/in/nayarabpereira">Nayara Pereira</a></span></div>
     <div class="sociais"><span>SOCIAIS</span>
-    <div><a href=""><img src="../static/icons/icone-facebook-32x32.png"></a><a href=""><img src="../static/icons/icone-instagram-32x32.png"></a><a href=""><img src="../static/icons/icone-linkedin-32x32.png"></a></div>
+    <div><a href=""><img src="/icons/icone-facebook-32x32.png"></a><a href=""><img src="/icons/icone-instagram-32x32.png"></a><a href=""><img src="/icons/icone-linkedin-32x32.png"></a></div>
     </div>
   </div>
   <div class="copy">&copy;MONITORANDO. TODOS OS DIREITOS RESERVADOS</div>
 </footer>
-<script src="../static/js/login.js"></script> 
-<script src="../static/js/fastclick.js"></script> 
-<script src="../static/js/scroll.js"></script> 
-<script src="../static/js/fixed-responsive-nav.js"></script>
+<script src="/js/login.js"></script> 
+<script src="/js/fastclick.js"></script> 
+<script src="/js/scroll.js"></script> 
+<script src="/js/fixed-responsive-nav.js"></script>
 </body>
 </html>

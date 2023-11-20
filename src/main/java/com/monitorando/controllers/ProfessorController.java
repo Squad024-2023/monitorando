@@ -25,14 +25,14 @@ public class ProfessorController {
    public String listProfessor(Model model) {
 	   List<Professor>professor = profService.getAllProfessores();
 	   model.addAttribute("professores",professor);
-	  return "ListarProfessores";
+	  return "professores";
    }
    //Adicionar um novo professor
    @GetMapping("novo")
    public String showFormAdd(Model model) {
 	   Professor professor = new Professor();
 	   model.addAttribute("professor", professor);
-	   return "ProfForm";
+	   return "createProf";
    }
    //Formulario para a criação
    @PostMapping("/save")
@@ -46,7 +46,7 @@ public class ProfessorController {
    public String showFormUpdate(@PathVariable Long profMatricula, Model model) {
 	   Professor professor = profService.getProfessorByProfMatricula(profMatricula);
 	   model.addAttribute("professor", professor);
-	   return "editarProfessor";
+	   return "updateProf";
    }
    
    //Formulário de Editar

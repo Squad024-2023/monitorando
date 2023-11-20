@@ -51,13 +51,13 @@ td {
   color: var(--primaryColor);
   text-align: center;
   font-size: clamp(1rem, 2vw, 2.5rem);
-  line-height: clamp(2rem, 3vh, 4rem);
-  padding:0.5rem;
+line-height: clamp(1.5rem, 2vh, 3rem);
+padding: 0.5rem;
   border-left: solid 1px var(--primaryColor);
 }
 .editar {
   padding:0.5rem;
-  padding-left: 1rem;
+padding-left: 1rem;
   cursor: pointer;
   transition: ease 0.3s;
   background-color: var(--supportColor2);
@@ -68,7 +68,11 @@ td {
   transition: ease 0.3s;
   background-color: darkred;
 }
-td>button>img {
+td>a>img {
+  width: 30px;
+}
+td>a{
+  display: block;
 }
 .deletarp:hover {
   transform: scale(1.05)
@@ -235,7 +239,6 @@ input[type="radio"]{
     border-radius: 0.5rem;
     width: 100%;
     font-size: 2.5rem;
-    color: var(--primaryColor);
     padding:0.5rem 0rem 0.5rem 1rem;
   }
   input:focus{
