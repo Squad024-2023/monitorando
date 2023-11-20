@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Lista de Professores</title>
+	<!-- Link para o Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+		integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+
+<body>
+
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<a class="navbar-brand" th:href="@{/professores}">Lista de Professores</a>
+	
+	</nav>
+	
+	
+		<div class="container mt-3">
+		<h2>Lista de Professores</h2>
+	
+		<table class="table">
+			<thead class="thead-light">
+				<tr>
+					<th>Prof Matrícula: </th>
+					<th>Nome: </th>
+					<th>Email: </th>
+					<th>Telefone: </th>
+					<th>Senha: </th>
+					
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="professor : ${professores}">
+					<td th:text="${professor.profMatricula}"></td>
+					<td th:text="${professor.profNome}"></td>
+					<td th:text="${professor.profEmail}"></td>
+					<td th:text="${professor.profTelefone}"></td>
+					<td th:text="${professor.profSenha}"></td>
+			
+					<td>
+						<a class="btn btn-info btn-sm"
+							th:href="@{/professores/editar/{profMatricula}(profMatricula=${professor.profMatricula})}">Editar</a>
+						<a class="btn btn-danger btn-sm"
+							th:href="@{/professores/deletar/{profMatricula}(profMatricula=${professor.profMatricula})}">Excluir</a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+			<a class="btn btn-primary mb-2" th:href="@{/professores/novo}">Adicionar Professor</a>
+
+</body>
+
+</html>
