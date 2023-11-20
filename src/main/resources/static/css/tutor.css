@@ -1,0 +1,122 @@
+/* CSS Document */ :root {
+  --primaryColor: #4d004d; /*ROSA ESCURO*/
+  --secondaryColor: #349400; /*VERDE ESCURO*/
+  --tertiaryColor: #990199; /*ROSA MAIS CLARO*/
+  --supportColor1: #e602e6; /*ROSA CLARO*/
+  --supportColor2: #48c902; /*VERDE CLARO*/
+}
+h1 {
+  color: white;
+  font-size: 3rem;
+}
+p {
+  color: white;
+  font-size: 2rem;
+  margin: 0;
+  text-align: justify;
+}
+.sessao1 {
+  background-image: url("../images/chalkboardgreen.png");
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  justify-content: center;
+}
+.bloco1sessao1 {
+  height: 100%;
+  width: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.bloco {
+  width: 100%;
+  max-width: 60rem;
+}
+.ptutor {
+  font-size: 1.9rem;
+}
+.h1tutor {
+  text-align: left;
+}
+.bloco1sessao1 > img {
+  width: 30rem;
+  height: 30rem;
+}
+img:hover {
+  transition: .7s;
+  transform: scale(0.9);
+}
+.sessao2 {
+  background-image: #FFFFFF;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.benefits {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.benefits > h1 {
+  color: #4d004d;
+  text-align: center;
+}
+.blocobenefits {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.cardbenefits {
+  width: 100%;
+  max-width: 40rem;
+  background-color: #990199;
+  border-radius: 8px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 2%;
+  padding: 2%;
+}
+.cardbenefits > h2 {
+  font-size: 2.5rem;
+  color: white;
+}
+.cardbenefits > p {
+  text-align: center;
+}
+.cardbenefits:hover {
+  background-color: #4d004d;
+  transition: .5s;
+  transform: scale(1.1);
+  background-position: -70px;
+}
+@media screen and (max-width: 960px) {
+  .sessao2 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width:740px) {
+  h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+  .h1tutor {
+    text-align: center;
+  }
+  p {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+}

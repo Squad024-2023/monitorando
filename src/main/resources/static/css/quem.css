@@ -1,0 +1,134 @@
+/* CSS Document */ :root {
+  --primaryColor: #4d004d; /*ROSA ESCURO*/
+  --secondaryColor: #349400; /*VERDE ESCURO*/
+  --tertiaryColor: #990199; /*ROSA MAIS CLARO*/
+  --supportColor1: #e602e6; /*ROSA CLARO*/
+  --supportColor2: #48c902; /*VERDE CLARO*/
+}
+h1 {
+  color: white;
+  font-size: 4rem;
+}
+p {
+  color: white;
+  font-size: 1.9rem;
+  margin: 0;
+  text-align: justify;
+}
+.sessao1 {
+  background-image: url("../images/chalkboardgreen.png");
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.bloco1sessao1 {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  max-width: 80rem;
+}
+.bloco2sessao2 {
+  align-self: flex-end;
+  height: 100%;
+}
+.bloco2sessao1 {
+  width: 80%;
+  max-width: 80rem;
+  display: flex;
+  justify-content: flex-end;
+}
+.bloco2sessao1 > img {
+  object-fit: contain;
+  width: 100%;
+  max-width: 40rem;
+  border-radius: 1rem;
+}
+.sessao2 {
+  background-image: url("../images/chalkboarddarkpink.png");
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bloco1sessao2 {
+  width: 80%;
+  max-width: 80rem;
+}
+.bloco2sessao2 {
+  height: 100%;
+  text-align: right;
+}
+.sessao3 {
+  background-image: url("../images/chalkboardgreen.png");
+  background-size: cover;
+  padding: 2rem 0;
+}
+.bloco1sessao3 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.sessao3 h1, .sessao3 p {
+  color: #FFFFFF;
+  text-align: center;
+}
+.depoimentos {
+  width: 100%;
+  max-width: 40rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+.depoimentos > img {
+  height: 10rem;
+  width: 10rem;
+}
+.sessao3 .depoimentos .depoimentos-avatar {
+  background-color: #FFFFFF;
+  color: #000000;
+  border-radius: 15px;
+  padding: 20px;
+  width: 100%;
+  position: relative;
+  margin: 35px auto;
+  font-style: italic;
+}
+.depoimentos-avatar:after {
+  content: "";
+  width: 0%;
+  height: 0%;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid #FFFFFF;
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+.namedoavatar {
+  font-weight: bold;
+}
+@media screen and (max-width: 960px) {
+  .sessao3 {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width:740px) {
+  h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+  p {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+}

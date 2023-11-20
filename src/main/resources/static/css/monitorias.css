@@ -1,0 +1,280 @@
+/* CSS Document */ :root {
+  --primaryColor: #4d004d; /*ROSA ESCURO*/
+  --secondaryColor: #349400; /*VERDE ESCURO*/
+  --tertiaryColor: #990199; /*ROSA MAIS CLARO*/
+  --supportColor1: #e602e6; /*ROSA CLARO*/
+  --supportColor2: #48c902; /*VERDE CLARO*/
+}
+.sessao1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("../images/chalkboarddarkpink.png");
+  background-size: cover;
+  color: white;
+  height: 100%;
+  min-height: 100vh;
+}
+h1 {
+  font-size: 4rem;
+  color: white;
+  margin: 2rem 0;
+  width: 80%;
+  max-width: 110rem;
+  text-align: center;
+}
+p {
+  font-size: 2rem;
+  margin: 0;
+  color: inherit;
+}
+.form {
+  width: 80%;
+  max-width: 110rem;
+  display: flex;
+  flex-direction: column;
+}
+.busc {
+  display: flex;
+  height: 5rem;
+  width: 100%;
+}
+.busc > input {
+  height: 100%;
+  width: 80%;
+  border-radius: 0.5rem 0 0 0.5rem;
+  padding-left: 2rem;
+  color: var(--primaryColor);
+  font-size: 2rem;
+  padding-bottom: 0.5rem;
+  box-shadow: 0.1rem 0.6rem 0.8rem 0.5rem #0000003a;
+}
+input::placeholder {
+  color: var(--primaryColor);
+  font-size: 1.5rem;
+}
+input:focus {
+  outline: none;
+}
+.busc:focus-within {
+  transform: scale(1.01);
+}
+#busca {
+  width: 20%;
+  color: var(--primaryColor);
+  background-color: white;
+  border-left: 1px solid var(--primaryColor);
+  border-radius: 0 0.5rem 0.5rem 0;
+  box-shadow: 0.1rem 0.6rem 0.8rem 0.5rem #0000003a;
+}
+#busca:active {
+  transform: scale(1.01);
+}
+select {
+  margin-top: 2rem;
+  width: 18rem;
+  height: 4rem;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  color: var(--primaryColor);
+  box-shadow: 0.1rem 0.6rem 0.8rem 0.5rem #0000003a;
+}
+select:focus {
+  outline: 0;
+  transform: scale(1.01);
+}
+option {
+  color: var(--primaryColor);
+}
+h2 {
+  font-size: 3rem;
+  color: inherit;
+  margin: 2rem 0;
+  width: 80%;
+  max-width: 110rem;
+  text-align: center;
+}
+@media screen and (max-width:42rem) {
+  .textoP > span, h3 {
+    text-align: center;
+  }
+}
+.monContainer {
+  margin: 2rem 0;
+  width: 100%;
+  height: 100;
+  max-width: 140rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+.monitores {
+  width: 100%;
+  max-width: 65rem;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 1rem 0;
+}
+.perfil {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.textoP {
+  display: flex;
+  flex-direction: column;
+  max-width: 51rem;
+  background-color: #e602e61a;
+  border-radius: 0.5rem;
+  box-shadow: 0.1rem 0.6rem 0.8rem 0.1rem #0000002a;
+}
+.textoP > h3 {
+  color: white;
+  font-size: 2rem;
+  padding: 0.5rem;
+}
+.textoP > span, h3 {
+  padding: 0 1rem;
+  width: 100%;
+  font-size: 1.5rem;
+  color: white;
+}
+.perfilBtn {
+  display: flex;
+  gap: 0.2rem;
+  margin-top: 1rem;
+}
+.perfilBtn > button {
+  width: 60%;
+  height: 3rem;
+  border-radius: 0 0 0.5rem 0.5rem;
+  font-size: 1.5rem;
+  color: var(--primaryColor);
+}
+.perfilBtn > button:active {
+  transform: scale(1.01);
+}
+.perfil > img {
+  object-fit: cover;
+  height: 12rem;
+  width: 12rem;
+  border-radius: 100%;
+  flex-shrink: 0;
+  box-shadow: 0.1rem 0.6rem 0.8rem 0.1rem #0000002a;
+}
+.sessao2 {
+  background-image: url("../images/chalkboardgreen.png");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 2rem;
+  gap: 2rem;
+}
+.centroM {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+.materias {
+  width: 80rem;
+  color: white;
+  display: flex;
+  flex-wrap: wrap-reverse;
+  justify-content: center;
+  gap: 2rem;
+  height: 100%;
+  position: relative;
+}
+.materia {
+  width: 100%;
+  max-width: 30rem;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.materias > img {
+  width: 100%;
+  height: 30rem;
+  max-width: 40rem;
+  object-fit: contain;
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0.1rem 0.6rem 0.8rem 0.1rem #0000002a;
+}
+.refer {
+  position: absolute;
+  top: 28rem;
+  right: 6rem;
+}
+.materia > h3 {
+  font-size: 3rem;
+  color: inherit;
+  text-align: right;
+}
+.conteudoMat {
+  width: 100%;
+  max-width: 30rem;
+  align-self: flex-end;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: inherit;
+  list-style: none;
+}
+.conteudoMat > li {
+  display: flex;
+  width: 100%;
+  margin: 1rem 0;
+  background-color: #0000005a;
+  border-radius: 0.5rem;
+}
+.conteudoMat > li > a {
+  width: 100%;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0.1rem 0.6rem 0.8rem 0.1rem #0000002a;
+  text-align: right;
+}
+.conteudoMat > li > a:hover {
+  color: var(--primaryColor);
+  background-color: white;
+}
+.conteudoMat > li > a:active {
+  transform: scale(1.01);
+}
+@media screen and (max-width:740px) {
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  .materias {
+    width: 100%;
+    max-width: 40rem;
+  }
+  .materia > h3 {
+    font-size: 2rem;
+    text-align: center;
+  }
+  .conteudoMat > li > a {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+}

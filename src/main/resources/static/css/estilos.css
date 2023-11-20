@@ -1,0 +1,399 @@
+/* CSS Document */ :root {
+  --primaryColor: #4d004d; /*ROSA ESCURO*/
+  --secondaryColor: #349400; /*VERDE ESCURO*/
+  --tertiaryColor: #990199; /*ROSA MAIS CLARO*/
+  --supportColor1: #e602e6; /*ROSA CLARO*/
+  --supportColor2: #48c902; /*VERDE CLARO*/
+}
+html {
+  font-size: 62.5%;
+}
+* {
+  box-sizing: border-box;
+  color: black;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+}
+a:active, a:hover {
+  outline: 0;
+}
+a {
+  text-decoration: none;
+}
+@-webkit-viewport {
+  width: device-width;
+}
+@-moz-viewport {
+  width: device-width;
+}
+@-ms-viewport {
+  width: device-width;
+}
+@-o-viewport {
+  width: device-width;
+}
+@viewport {
+  width: device-width;
+}
+@font-face {
+  font-family: 'sun_seedregular';
+  src: url("sun-seed-webfont.woff2") format('woff2'), url("sun-seed-webfont.woff") format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+/*Estilos da Navbar*/
+.nav-collapse ul {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: block;
+  list-style: none;
+}
+.nav-collapse li {
+  width: 100%;
+  display: block;
+}
+.js .nav-collapse {
+  clip: rect(0 0 0 0);
+  max-height: 0;
+  position: absolute;
+  display: block;
+  overflow: hidden;
+  zoom: 1;
+}
+.nav-collapse.opened {
+  max-height: 9999px;
+}
+.disable-pointer-events {
+  pointer-events: none !important;
+}
+.nav-toggle {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+/*Controlando a responsividade para telas menores*/
+@media screen and (min-width: 56em) {
+  .js .nav-collapse {
+    position: relative;
+  }
+  .js .nav-collapse.closed {
+    max-height: none;
+  }
+  .nav-toggle {
+    display: none;
+  }
+}
+body {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  color: #37302a;
+  background: #fff;
+  font: normal 100%/1.4 sans-serif;
+}
+section {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  padding: 5.5rem 1rem 0;
+  border-bottom: solid 0.5rem white;
+}
+header {
+  background-color: white;
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  left: 0;
+  top: 0;
+  border-bottom: solid 2px var(--primaryColor);
+  box-shadow: 0.1rem 0.6rem 0.8rem 0.5rem #0000003a;
+  display: flex;
+  flex-wrap: wrap;
+justify-content: space-between;
+}
+@media screen and (min-width: 56em) {
+  header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+}
+.logo {
+  display: block;
+}
+.logo > spam{
+  font: 600 5rem "Sun Seed";
+  color: var(--primaryColor);
+  font-size: 5rem;
+}
+
+.logoimg{
+height: 3rem;
+margin-right: 0.1rem;
+object-fit: contain;
+}
+@media screen and (max-width: 78em) {
+  /*76em padrao sem o botao adm*/
+  .logo {
+    display: block;
+  }
+  .logo > spam{
+    display: none;
+  }
+  .logoimg{
+    height: 4rem;
+  }
+}
+@media screen and (max-width: 55.99em) {
+  .logo {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    padding-left: 1rem;
+  }
+  .logo > spam{
+    display: flex;
+    font-size: 5rem;
+  }
+  .logoimg{
+    height: 3rem;
+  }
+}
+@media screen and (max-width:43em){
+.logo > spam{
+  font-size: 3rem;
+}
+.logoimg{
+  height: 1.8rem;
+}
+}
+.mask {
+  -webkit-transition: opacity 300ms;
+  -moz-transition: opacity 300ms;
+  transition: opacity 300ms;
+  background: rgba(0, 0, 0, .5);
+  visibility: hidden;
+  position: fixed;
+  opacity: 0;
+  z-index: 2;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 5px;
+}
+.android .mask {
+  -webkit-transition: none;
+  transition: none;
+}
+.js-nav-active .mask {
+  visibility: visible;
+  opacity: 1;
+}
+@media screen and (min-width: 56em) {
+  .mask {
+    display: none !important;
+    opacity: 0 !important;
+  }
+}
+/*Estilos dos objetos da navegação*/
+.fixed {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+.nav-collapse, .nav-collapse * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.nav-collapse, .nav-collapse ul {
+  list-style: none;
+  width: 100%;
+  float: left;
+}
+@media screen and (min-width: 56em) {
+  .nav-collapse {
+    float: right;
+    width: auto;
+  }
+}
+.nav-collapse li {
+  float: left;
+  width: 100%;
+  height: 60px;
+  border-left: solid 2px var(--primaryColor);
+}
+@media screen and (min-width: 56em) {
+  .nav-collapse li {
+    width: auto;
+  }
+}
+.nav-collapse a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  border-top: 1px solid var(--tertiaryColor);
+  text-decoration: none;
+  background: white;
+  padding: 0.7em 1em;
+  font-weight: 700;
+  color: var(--primaryColor);
+  width: 100%;
+  height: 60px;
+  float: left;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+.nav-collapse a:active, .nav-collapse .active a {
+  background-color: var(--primaryColor);
+  color: white;
+}
+@media screen and (min-width: 60.5em) {
+  /*56 padrao sem o botao adm*/
+  .nav-collapse a {
+    padding: 1.02em 2em;
+    text-align: center;
+    border-top: 0;
+    float: left;
+    margin: 0;
+  }
+}
+.nav-collapse ul ul a {
+  background: var(--primaryColor);
+  padding-left: 2em;
+}
+@media screen and (min-width: 56em) {
+  .nav-collapse ul ul a {
+    display: none;
+  }
+}
+/*Estilo dos objetos de navegação quando ativos*/
+.nav-toggle {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-decoration: none;
+  text-indent: -300px;
+  position: relative;
+  overflow: hidden;
+  width: 60px;
+  height: 50px;
+  float: right;
+  align-items: center;
+}
+.nav-toggle:before {
+  color: var(--tertiaryColor); /*Cor do ícone*/
+  font: normal 50px/55px "Sun Seed"; /*Editar o primeiro número muda o tamanho do ícone*/
+  text-transform: none;
+  position: absolute;
+  content: "\2261"; /* Hamburger icon */
+  text-indent: 0;
+  speak: none;
+  width: 100%;
+  left: 20px;
+  top: 0;
+}
+.nav-toggle.active:before {
+  font-size: 40px;
+  content: "\78"; /* Close icon */
+}
+footer {
+  width: 100%;
+  color: black;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  border-top: 1px solid black;
+  padding-top: 30px;
+  padding-bottom: 10px;
+}
+.footerCentro {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 1rem;
+  gap: 2rem;
+  
+}
+footer > div {
+  width: 100%;
+  color: inherit;
+}
+.contatos {
+  width: 20rem;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+}
+.contatos > span {
+  color: inherit;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: left;
+}
+.sociais {
+  width: 20rem;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+}
+.sociais > span {
+  color: inherit;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.sociais > div {
+  height: 4rem;
+  display: flex;
+  gap: 5px;
+}
+.copy {
+  color: inherit;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+}
+.ani {
+  filter: blur(5px);
+  transform: scale(0);
+  opacity: 0;
+  transition: ease-in-out 1s;
+}
+.animate {
+  filter: blur(0);
+  transform: scale(1);
+  opacity: 1;
+}
+.ani2 {
+  opacity: 0;
+  transition: ease-in-out 1s;
+}
+.animate2 {
+  opacity: 1;
+}
+.contatos >span> a{
+transition: ease 0.3s;
+border-radius: 0.5rem;
+}
+.contatos >span> a:hover{
+  color: var(--primaryColor);
+  font-size: 1.5rem;
+}
+@media(prefers-reduced-motion) {
+  .ani {
+    transition: none;
+  }
+  .ani2 {
+    transition: none;
+  }
+}

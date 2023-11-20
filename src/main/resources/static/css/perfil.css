@@ -1,0 +1,223 @@
+/* CSS Document */
+:root {
+  --primaryColor: #4d004d;
+  /*ROSA ESCURO*/
+  --secondaryColor: #349400;
+  /*VERDE ESCURO*/
+  --tertiaryColor: #990199;
+  /*ROSA MAIS CLARO*/
+  --supportColor1: #e602e6;
+  /*ROSA CLARO*/
+  --supportColor2: #48c902;
+  /*VERDE CLARO*/
+}
+
+@font-face {
+  font-family: 'sun_seedregular';
+  src: url("sun-seed-webfont.woff2") format('woff2'), url("sun-seed-webfont.woff") format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.sessao1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url(../images/chalkboardgreen.png);
+  background-size: cover;
+  padding: 10rem 0;
+
+}
+
+h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: white;
+  margin-bottom: 10rem;
+}
+
+.perfil {
+  padding: 2rem;
+  border-radius: 0.5rem;
+  width: 80%;
+  max-width: 80rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  background-color: white;
+}
+
+label {
+  display: flex;
+  flex-direction: column-reverse;
+  font-size: 1.5rem;
+  color: var(--primaryColor);
+}
+
+input {
+  font-size: 2rem;
+  border-bottom: solid 2px;
+  color: var(--primaryColor);
+  border-radius: 0.5rem;
+  padding-left: 1rem;
+  height: 4rem;
+}
+
+input::placeholder {
+  color: var(--primaryColor);
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.edit {
+  cursor: pointer;
+  background-color: var(--supportColor2);
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px #0000004a;
+  transition: ease 0.2s;
+  
+}
+
+.delete {
+  cursor: pointer;
+  background-color: darkred;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px #0000004a;
+  transition: ease 0.2s;
+}
+
+.edit,
+.delete {
+  font-size: 2rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+}
+
+.edit>img,
+.delete>img {
+  width: 40px;
+  height: 40px;
+  padding: 0.5rem;
+}
+
+.delete:hover {
+  transform: scale(1.05)
+}
+
+.edit:hover {
+  transform: scale(1.05)
+}
+
+.modal-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 4;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #0000003a;
+  opacity: 0;
+  pointer-events: none;
+  transition: ease 0.2s;
+}
+
+.mostrar {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal {
+  background-color: white;
+  width: 60rem;
+  padding: 3rem 5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px #0000004a;
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+
+}
+
+.modal label {
+  width: 100%;
+}
+
+.fechar {
+  cursor: pointer;
+  height: 4rem;
+  width: 4rem;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  color: white;
+  background-color: var(--primaryColor);
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px #0000004a;
+  transition: ease 0.2s;
+}
+.fechar:hover{
+  transform: scale(1.05)
+}
+
+.modal h1 {
+  color: var(--primaryColor);
+}
+
+#salvar {
+  cursor: pointer;
+  font-size: 2rem;
+  height: 5rem;
+  padding: 0.5rem 1rem;
+  color: white;
+  background-color: var(--supportColor2);
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px #0000004a;
+  transition: ease 0.2s;
+}
+
+#salvar:hover {
+  transform: scale(1.05)
+}
+
+.modal h2 {
+  color: darkred;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+#confirmar,
+#voltar {
+  cursor: pointer;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px #0000004a;
+  font-size: 2rem;
+  height: 5rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  transition: ease 0.2s;
+}
+
+#confirmar {
+  background-color: darkred;
+}
+#voltar {
+  background-color: var(--supportColor2);
+}
+#confirmar:hover, #voltar:hover{
+  transform: scale(1.05)
+}
+input:focus{
+  outline: solid 1px var(--primaryColor);
+}
