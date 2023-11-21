@@ -1,14 +1,14 @@
 # Monitorando
 
-![monitorando-roxo-fundo-transparente](https://github.com/Squad024-2023/monitorando/assets/142227461/6a9f7302-824a-4607-81df-77e66188c757)
+![image](https://github.com/Squad024-2023/monitorando/assets/142227461/82e728e1-2823-4830-96d1-19a1992804b0)
 
 ## Squad 024
 ### Líder: Arthur Bernard
 ### Vice-líder: Kauã Melo
-Squad: Mariana Moreira
-Squad: Nayara Pereira
-Squad: Bianca Tayla
-Squad: Maristela Santos 
+- **Squad: Mariana Moreira
+- **Squad: Nayara Pereira
+- **Squad: Bianca Tayla
+- **Squad: Maristela Santos 
 
 ## Visão Geral
 
