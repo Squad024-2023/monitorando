@@ -17,8 +17,10 @@
   align-items: center;
   background-image: url(../images/chalkboarddarkpink.png);
   padding-top: 10rem;
+  padding-bottom: 5rem;
 }
 h1{
+  text-align: center;
   font-size: 3rem;
   text-transform: uppercase;
   color: white;
@@ -30,6 +32,7 @@ table {
   border-collapse: collapse;
   padding: 1rem;
   border-radius: 0.5rem;
+  border: solid 1px var(--primaryColor)
 }
 tr{
   margin: 2rem;
@@ -38,32 +41,23 @@ tr{
 th {
   color: var(--primaryColor);
   text-align: center;
-  font-size: 2rem;
-  line-height: 4rem;
+  font-size: clamp(1rem, 2vw, 2.5rem);
+  line-height: clamp(2rem, 3vh, 4rem);
   text-transform: uppercase;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem;
   border: solid 1px var(--primaryColor);
 }
-@media screen and (max-width: 76em) {
-th{
-  font-size: 2rem;
-}
-}
-@media screen and (max-width: 60em) {
-  th{
-   line-height: normal;
-  }
-  }
 td {
   color: var(--primaryColor);
   text-align: center;
-  font-size: 1.5rem;
-  padding:0.5rem;
+  font-size: clamp(1rem, 2vw, 2.5rem);
+line-height: clamp(1.5rem, 2vh, 3rem);
+padding: 0.5rem 1rem;
   border-left: solid 1px var(--primaryColor);
 }
 .editar {
   padding:0.5rem;
-  padding-left: 1rem;
+padding-left: 1rem;
   cursor: pointer;
   transition: ease 0.3s;
   background-color: var(--supportColor2);
@@ -74,9 +68,11 @@ td {
   transition: ease 0.3s;
   background-color: darkred;
 }
-td>button>img {
-  width: 32px;
-  height: 32px;
+td>a>img {
+  width: 30px;
+}
+td>a{
+  display: block;
 }
 .deletarp:hover {
   transform: scale(1.05)
@@ -84,8 +80,11 @@ td>button>img {
 .editar:hover {
   transform: scale(1.05)
 }
-
-
+.turmasA{
+	    font-size: clamp(1rem, 1vw, 2rem);
+	  color: var(--primaryColor);
+	  font-family: Arial, Helvetica, sans-serif;
+}
 /*CREATE CSS*/
 .container {
   position: relative;
@@ -220,6 +219,30 @@ input[type="radio"]{
   }
   }
 
+.checkbox{
+	display: flex;
+	align-items: center;
+	padding: 0.5rem;
+}
+.checkbox>label{
+	font-size: 1.5rem;
+}
+input[type=radio]{
+height: 30px;
+}
+input[type=radio]:focus{
+	outline: none;
+}
+.selecao{
+	font-size: 2rem;
+	border-radius: 0.5rem;
+	width: 100%;
+	color: var(--primaryColor);
+	background-color: #0000001a;
+}
+.selecao:focus{
+	outline: none;
+}
   /*UPDATE CSS*/
   .editarForm{
     width: 90%;
@@ -235,7 +258,6 @@ input[type="radio"]{
     display: flex;
     flex-direction: column-reverse;
     align-items: flex-start;
-    
   }
   .editarForm > label >input{
     height: 3.5rem;
@@ -243,7 +265,6 @@ input[type="radio"]{
     border-radius: 0.5rem;
     width: 100%;
     font-size: 2.5rem;
-    color: var(--primaryColor);
     padding:0.5rem 0rem 0.5rem 1rem;
   }
   input:focus{
@@ -264,4 +285,7 @@ input[type="radio"]{
   }
   #salvar:hover{
     transform: scale(1.05);
+  }
+  .professor{
+	  text-align: left;
   }

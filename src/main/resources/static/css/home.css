@@ -51,7 +51,7 @@ p {
 }
 .sessao2 {
   height: 100%;
-  padding: 0;
+  padding: 5rem 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
