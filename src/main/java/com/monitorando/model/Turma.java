@@ -5,6 +5,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 import jakarta.persistence.CascadeType;
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -19,13 +20,18 @@ public class Turma {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long codTurma;
+	@Column(nullable = false)
 	private String tipoTurma;
+	@Column(nullable = false)
 	private LocalDateTime dataTurma;
 
 	@ManyToMany(cascade = { CascadeType.PERSIST, CascadeType.MERGE })
 	@JoinTable(name = "turma_professor", joinColumns = @JoinColumn(name = "cod_turma"),
 	inverseJoinColumns = @JoinColumn(name = "prof_matricula"))
 	private Set<Professor> professores = new HashSet<>();
+	
+	
+	
 
 	public Turma() {
 	}

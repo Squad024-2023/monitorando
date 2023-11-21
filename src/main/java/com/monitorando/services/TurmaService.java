@@ -10,7 +10,7 @@ public interface TurmaService {
 
 	Turma getTurmaById(Long codTurma);
 
-	Turma saveTurma(Turma turma, Set<Long> ProfId);
+	Turma saveTurma(Turma turma, Set<Long> ProfMatricula);
 
 	Turma updateTurma(Long codTurma, Turma turmaAtualizada);
 
