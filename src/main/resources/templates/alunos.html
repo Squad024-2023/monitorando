@@ -35,22 +35,21 @@
           <th>Nome</th>
           <th>Telefone</th>
           <th>E-mail</th>
+          <th>Tipo da Turma</th>
         </tr>
         <tr>
-          <td>alow</td>
-          <td>dale</td>
-          <td>pra não</td>
-          <td>vamo</td>
-          <td><button class="editar" id="editar"><img src="/icons/edit-32-32.svg"></button></td>
-        <td><button class="deletarp" id="deletarp"><img src="/icons/delete-32-32.svg"></button></td>
-        </tr>
-        <tr>
-          <td>alow</td>
-          <td>dale</td>
-          <td>pra não</td>
-          <td>vamo</td>
-          <td><button class="editar" id="editar"><img src="/icons/edit-32-32.svg"></button></td>
-        <td><button class="deletarp" id="deletarp"><img src="/icons/delete-32-32.svg"></button></td>
+          <tr th:each="aluno : ${aluno}">
+			<td th:text="${aluno.alu_matricula}"></td>
+			<td th:text="${aluno.alu_nome}"></td>
+			<td th:text="${aluno.alu_telefone}"></td>
+			<td  th:text="${aluno.alu_email}"></td>
+			<td>
+            <span class="turmasA" th:each="turma : ${aluno.turma}">
+            <span class="turmasA" th:text="${turma.tipoTurma}"></span>
+        </span>
+    </td>
+          <td class="editar"><a id="editar "th:href="@{/aluno/editar/{alu_matricula}(alu_matricula=${aluno.alu_matricula})}"><img src="/icons/edit-32-32.svg"></a></td>
+        <td class="deletarp"><a id="deletarp" th:href="@{/aluno/deletar/{alu_matricula}(alu_matricula=${aluno.alu_matricula})}"><img src="/icons/delete-32-32.svg"></a></td>
         </tr>
       </table>
     </form>

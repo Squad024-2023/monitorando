@@ -80,8 +80,11 @@ td>a{
 .editar:hover {
   transform: scale(1.05)
 }
-
-
+.turmasA{
+	    font-size: clamp(1rem, 1vw, 2rem);
+	  color: var(--primaryColor);
+	  font-family: Arial, Helvetica, sans-serif;
+}
 /*CREATE CSS*/
 .container {
   position: relative;
@@ -218,17 +221,26 @@ input[type="radio"]{
 
 .checkbox{
 	display: flex;
-	padding: 0.5rem;
 	align-items: center;
+	padding: 0.5rem;
 }
 .checkbox>label{
 	font-size: 1.5rem;
 }
 input[type=radio]{
-	width: 20px;
-	margin-top: 0.5rem;
+height: 30px;
 }
 input[type=radio]:focus{
+	outline: none;
+}
+.selecao{
+	font-size: 2rem;
+	border-radius: 0.5rem;
+	width: 100%;
+	color: var(--primaryColor);
+	background-color: #0000001a;
+}
+.selecao:focus{
 	outline: none;
 }
   /*UPDATE CSS*/

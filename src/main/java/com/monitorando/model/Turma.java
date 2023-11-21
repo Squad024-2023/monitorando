@@ -1,7 +1,9 @@
 package com.monitorando.model;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 import jakarta.persistence.CascadeType;
@@ -25,11 +27,15 @@ public class Turma {
 	@Column(nullable = false)
 	private LocalDateTime dataTurma;
 
-	@ManyToMany(cascade = { CascadeType.PERSIST, CascadeType.MERGE })
-	@JoinTable(name = "turma_professor", joinColumns = @JoinColumn(name = "cod_turma"),
-	inverseJoinColumns = @JoinColumn(name = "prof_matricula"))
-	private Set<Professor> professores = new HashSet<>();
+	@ManyToMany(mappedBy = "turma")
+    private Set<Aluno> aluno = new HashSet<>();
 
+    @ManyToMany
+    @JoinTable(name = "professores_turmas", 
+               joinColumns = @JoinColumn(name = "cod_turma"), 
+               inverseJoinColumns = @JoinColumn(name = "cod_professor"))
+    private Set<Professor> professores = new HashSet<>();
+	
 	public Turma() {
 	}
 
@@ -70,5 +76,9 @@ public class Turma {
 
 	public void setProfessores(Set<Professor> professores) {
 		this.professores = professores;
+	}
+
+	public List<Aluno> getAluno() {
+	    return new ArrayList<>(aluno);
 	}
 }

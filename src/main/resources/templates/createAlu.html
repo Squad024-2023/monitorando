@@ -25,22 +25,28 @@
 <section class="sessao1">
   <div class="container">
     <div class="outer">      
-          <form id="form" name="createForm"action="">
+          <form id="form" name="createForm" th:action="@{/aluno/salvar}" th:object="${aluno}" method="post">
           <div id="page">
           <label>Cadastrar Aluno</label>
           <div class="element">
-            <input type="text" placeholder="Nome">
+            <input type="text" placeholder="Nome" th:field="*{alu_nome}">
           </div>
           <div class="element">
-            <input type="text" placeholder="Telefone">
+            <input type="text" placeholder="Telefone" th:field="*{alu_telefone}">
           </div>
           <div class="element">
-            <input type="text" placeholder="E-mail">
+            <input type="text" placeholder="E-mail" th:field="*{alu_email}">
           </div>
           <div class="element">
-            <input type="password" placeholder="Senha">
+            <input type="password" placeholder="Senha" th:field="*{alu_senha}">
           </div>
-          <button id="btn" formaction="./perfil.html">Registrar</button>
+          <div class="element">			
+          <label for="codTurma">Selecione as Turmas:</label>
+        <select multiple="multiple" class="selecao" id="codTurma" name="codTurma">
+    <option th:each="turma : ${turma}" th:value="${turma.codTurma}" th:text="${turma.codTurma}"></option>
+</select>
+</div>
+          <button id="btn" type="submit">Registrar</button>
         </div>
       </form>
     </div>
@@ -49,11 +55,11 @@
 <footer>
   <div class="footerCentro">
     <div class="contatos"><span>Mapa do site:</span>
-      <span><a href="index.html">Home</a></span>
-      <span><a href="monitorias.html">Monitorias</a></span>
-      <span><a href="tutor.html">Torne-se um Tutor</a></span>
-      <span><a href="quem.html">Quem somos</a></span>
-      <span><a href="login.html">Login</a></span></div>
+        <span><a th:href="@{/index.html}">Home</a></span>
+        <span><a th:href="@{/monitorias.html}">Monitorias</a></span>
+        <span><a th:href="@{/tutor.html}">Torne-se um Tutor</a></span>
+        <span><a th:href="@{/quem.html}">Quem somos</a></span>
+        <span><a th:href="@{/login.html}">Login</a></span></div>
     <div class="contatos"><span>CONTATO</span><span>E-mail: monitorando@gmail.com</span><span>Telefone: 11 9 7233-5888</span></div>
     <div class="contatos"><span>SQUAD 24</span>
     <span><a href="https://www.linkedin.com/in/ber-arthur/">Arthur Bernard</a></span>
