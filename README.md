@@ -5,16 +5,16 @@
 ## Squad 024
 ### Líder: Arthur Bernard
 ### Vice-líder: Kauã Melo
-- **Squad: Mariana Moreira
-- **Squad: Nayara Pereira
-- **Squad: Bianca Tayla
-- **Squad: Maristela Santos 
+- Squad: Mariana Moreira
+- Squad: Nayara Pereira
+- Squad: Bianca Tayla
+- Squad: Maristela Santos 
 
 ## Visão Geral
 
 O Monitorando é uma iniciativa dedicada a apoiar estudantes provenientes de ensino público e de recursos limitados em suas jornadas acadêmicas. Nosso objetivo é fornecer assistência para superar as dificuldades enfrentadas por esses estudantes, permitindo que continuem em seus cursos de graduação, técnicos e profissionalizantes.
 
-- **Acreditamos em um Brasil onde ninguém desiste do sonho de ser quem quer ser.
+- Acreditamos em um Brasil onde ninguém desiste do sonho de ser quem quer ser.
 
 ## Como Podemos Ajudar?
 
