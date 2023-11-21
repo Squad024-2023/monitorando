@@ -1,0 +1,179 @@
+/* CSS Document */
+:root {
+  --primaryColor: #4d004d;
+  /*ROSA ESCURO*/
+  --secondaryColor: #349400;
+  /*VERDE ESCURO*/
+  --tertiaryColor: #990199;
+  /*ROSA MAIS CLARO*/
+  --supportColor1: #e602e6;
+  /*ROSA CLARO*/
+  --supportColor2: #48c902;
+  /*VERDE CLARO*/
+}
+
+@font-face {
+  font-family: 'sun_seedregular';
+  src: url("sun-seed-webfont.woff2") format('woff2'), url("sun-seed-webfont.woff") format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.sessao1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url(../images/chalkboardgreen.png);
+  background-size: cover;
+  padding: 10rem 2rem;
+
+}
+
+h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: white;
+  margin-bottom: 10rem;
+}
+h2{
+	font-size: 2rem;
+  text-transform: uppercase;
+  color: white;
+  margin: 5rem;
+}
+.crud {
+width: 80%;
+max-width: 60rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 1rem;
+}
+
+table,
+th,
+td {
+  text-align: center;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+tr {
+  line-height: 4rem;
+  border-bottom: solid 1px var(--secondaryColor);
+
+}
+th {
+  font-size: clamp(1.2rem, 2.5vw, 2rem);
+  color: var(--secondaryColor);
+  padding: 0.5rem;
+  border-left: solid 1px var(--secondaryColor);
+}
+
+td {
+  font-size: clamp(1.2rem, 2.5vw, 2rem);
+  color: var(--secondaryColor);
+  margin: 0 auto;
+  text-align: center;
+  font-weight: 800;
+  padding: 0.5rem;
+  border-left: solid 1px var(--secondaryColor);
+}
+.create {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  background-color: white;
+  transition: ease 0.2s;
+  display: flex;
+  justify-content: center;
+}
+
+.create>img {
+  background-color: var(--supportColor2);
+  box-shadow: 0 2px 4px #0000004a;
+  border-radius: 0.5rem;
+}
+.read {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  background-color: white;
+  transition: ease 0.2s;
+  display: flex;
+  justify-content: center;
+}
+
+.read>img {
+  background-color: var(--supportColor1);
+  box-shadow: 0 2px 4px #0000004a;
+  border-radius: 0.5rem;
+}
+.edit {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  background-color: white;
+  transition: ease 0.2s;
+  display: flex;
+  justify-content: center;
+}
+
+.edit>img {
+  background-color: var(--secondaryColor);
+  box-shadow: 0 2px 4px #0000004a;
+  border-radius: 0.5rem;
+}
+
+.delete {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  background-color: white;
+  transition: ease 0.2s;
+  display: flex;
+  justify-content: center;
+}
+
+.delete>img {
+  background-color: darkred;
+  box-shadow: 0 2px 4px #0000004a;
+  border-radius: 0.5rem;
+}
+
+.edit,
+.delete,
+.create,
+.read {
+  display: flex;
+  align-items: center;
+}
+.edit>img,.delete>img,.create>img,.read>img {
+  width: clamp(2rem, 6vw, 4rem);
+  padding: 0.5rem;
+}
+
+.delete:hover {
+  transform: scale(1.05)
+}
+
+.edit:hover {
+  transform: scale(1.05)
+}
+.create:hover {
+  transform: scale(1.05)
+}
+
+.read:hover {
+  transform: scale(1.05)
+}
+@media screen and (max-width: 40rem) {
+ tr{
+  line-height: 2rem;
+ }
+  }

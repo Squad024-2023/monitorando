@@ -1,0 +1,291 @@
+/* CSS Document */
+:root {
+  --primaryColor: #4d004d;
+  /*ROSA ESCURO*/
+  --secondaryColor: #349400;
+  /*VERDE ESCURO*/
+  --tertiaryColor: #990199;
+  /*ROSA MAIS CLARO*/
+  --supportColor1: #e602e6;
+  /*ROSA CLARO*/
+  --supportColor2: #48c902;
+  /*VERDE CLARO*/
+}
+.sessao1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url(../images/chalkboarddarkpink.png);
+  padding-top: 10rem;
+  padding-bottom: 5rem;
+}
+h1{
+  text-align: center;
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: white;
+  margin-bottom: 10rem;
+}
+/*READ CSS*/
+table {
+  background-color: white;
+  border-collapse: collapse;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: solid 1px var(--primaryColor)
+}
+tr{
+  margin: 2rem;
+  border-bottom: solid 5px var(--primaryColor);
+}
+th {
+  color: var(--primaryColor);
+  text-align: center;
+  font-size: clamp(1rem, 2vw, 2.5rem);
+  line-height: clamp(2rem, 3vh, 4rem);
+  text-transform: uppercase;
+  padding: 0.5rem;
+  border: solid 1px var(--primaryColor);
+}
+td {
+  color: var(--primaryColor);
+  text-align: center;
+  font-size: clamp(1rem, 2vw, 2.5rem);
+line-height: clamp(1.5rem, 2vh, 3rem);
+padding: 0.5rem 1rem;
+  border-left: solid 1px var(--primaryColor);
+}
+.editar {
+  padding:0.5rem;
+padding-left: 1rem;
+  cursor: pointer;
+  transition: ease 0.3s;
+  background-color: var(--supportColor2);
+}
+.deletarp {
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: ease 0.3s;
+  background-color: darkred;
+}
+td>a>img {
+  width: 30px;
+}
+td>a{
+  display: block;
+}
+.deletarp:hover {
+  transform: scale(1.05)
+}
+.editar:hover {
+  transform: scale(1.05)
+}
+.turmasA{
+	    font-size: clamp(1rem, 1vw, 2rem);
+	  color: var(--primaryColor);
+	  font-family: Arial, Helvetica, sans-serif;
+}
+/*CREATE CSS*/
+.container {
+  position: relative;
+  align-items: center;
+  padding: 2rem 3rem;
+  width: 90%;
+  max-width: 40rem;
+  background: white;
+  border-radius: 0.5rem;
+  box-shadow: 0.1rem 0.1rem 0.5rem 0.1rem #0000003a;
+}
+.container .outer {
+  width: 100%;
+  text-align: center;
+  position: relative;
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 0 2rem;
+}
+
+#page {
+  margin: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+justify-content: center;
+}
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  padding: 1rem 1.5rem;
+  text-align: center;
+  letter-spacing: 2px;
+  font-size: 2rem;
+  color: var(--primaryColor);
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.element {
+  position: relative;
+}
+.element input {
+  width: 100%;
+  height: 4rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid var(--primaryColor);
+  padding-left: 2rem;
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+input::placeholder {
+  color: var(--primaryColor);
+  font-size: 2rem;
+}
+#btn {
+  padding: 5px 25px;
+  background: var(--primaryColor);
+  color: white;
+  border-radius: 0.5rem;
+  height: 5rem;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  border: none;
+  margin-top: 1rem;
+  margin-bottom: 5rem;
+  cursor: pointer;
+  box-shadow: 0 2px 4px #0000004a;
+  transition: ease 0.2s;
+}
+#btn, lBtnG, #lBtnF, #cBtnG, #cBtnF:active {
+  transform: scale(1.01);
+}
+#btn:hover{
+  transform: scale(1.05);
+}
+#eSenha {
+  margin-top: 3rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--primaryColor);
+}
+#lBtnG, #lBtnF, #cBtnG, #cBtnF {
+  color: var(--primaryColor);
+  padding: 0.5rem 2.5rem;
+  background: transparent;
+  height: 5rem;
+  width: 80%;
+  border-radius: 0.5rem;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  border-bottom: solid 1px var(--primaryColor);
+  margin-top: 1rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+#lBtnG, cBtnG {
+  margin-top: 5rem;
+}
+button > img {
+  height: 2rem;
+}
+.radio{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.radio > *{
+  font-size: 2rem;
+}
+input[type="radio"]{
+  height: 2rem;
+  width: 2rem;
+}
+#aluno, #professor{
+  accent-color: var(--primaryColor);
+}
+.radio > input, label{
+  cursor: pointer;
+}
+@media screen and (max-width: 43rem) {
+  .radio > *{
+    font-size: 1.5rem;
+  }
+  input[type="radio"]{
+    height: 1rem;
+    width: 1rem;
+  }
+  }
+
+.checkbox{
+	display: flex;
+	align-items: center;
+	padding: 0.5rem;
+}
+.checkbox>label{
+	font-size: 1.5rem;
+}
+input[type=radio]{
+height: 30px;
+}
+input[type=radio]:focus{
+	outline: none;
+}
+.selecao{
+	font-size: 2rem;
+	border-radius: 0.5rem;
+	width: 100%;
+	color: var(--primaryColor);
+	background-color: #0000001a;
+}
+.selecao:focus{
+	outline: none;
+}
+  /*UPDATE CSS*/
+  .editarForm{
+    width: 90%;
+    max-width: 60rem;
+    height: auto;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+  }
+
+.editarForm > label{
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+  .editarForm > label >input{
+    height: 3.5rem;
+    border:solid 2px var(--primaryColor);
+    border-radius: 0.5rem;
+    width: 100%;
+    font-size: 2.5rem;
+    padding:0.5rem 0rem 0.5rem 1rem;
+  }
+  input:focus{
+    outline: solid 1px var(--supportColor1);
+  }
+  #salvar {
+    cursor: pointer;
+    font-size: 2rem;
+    height: 5rem;
+    padding: 0.5rem 1rem;
+    color: white;
+    background-color: var(--supportColor2);
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px #0000004a;
+    transition: ease 0.2s;
+    margin-left: 1.5rem;
+    transition: ease 0.3s;
+  }
+  #salvar:hover{
+    transform: scale(1.05);
+  }
+  .professor{
+	  text-align: left;
+  }

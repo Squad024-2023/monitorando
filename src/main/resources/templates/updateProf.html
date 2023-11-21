@@ -1,0 +1,67 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="utf-8">
+  <title>Editar Professor</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="/css/estilos.css">
+  <link rel="stylesheet" href="/css/crud2.css">
+  <script src="/js/responsive-nav.js"></script>
+  <link rel="icon" href="/icons/icon-page.png" type="image/x-icon" />
+</head>
+
+<body>
+  <header> <a href="index.html" class="logo" data-scroll><img class="logoimg" src="/icons/logo.png">
+      <spam>onitorando</spam>
+    </a>
+    <nav class="nav-collapse">
+      <ul>
+        <li class="menu-item"><a th:href="@{/index.html}" data-scroll>Home</a></li>
+        <li class="menu-item"><a th:href="@{/monitorias.html}" data-scroll>Monitorias</a></li>
+        <li class="menu-item"><a th:href="@{/tutor.html}" data-scroll>Torne-se um Tutor</a></li>
+        <li class="menu-item"><a th:href="@{/quem.html}" data-scroll>Quem Somos</a></li>
+        <li class="menu-item"><a th:href="@{/login.html}" data-scroll>Login</a></li>
+        <li class="menu-item"><a th:href="@{/crud.html}" data-scroll>ADM</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section class="sessao1">
+    <h1>Editar Professor</h1>
+        <form class="editarForm" th:action="@{/professores/editar/{profMatricula}(profMatricula=${professor.profMatricula})}" th:object="${professor}" method="post">
+          <label for="matricula"><input type="text" name="matricula" th:field="*{profMatricula}" readonly>Matrícula</label>
+          <label for="nome"><input type="text" name="nome" th:field="*{profNome}">Nome</label>
+          <label for="telefone"><input type="text" name="telefone" th:field="*{profTelefone}">Telefone</label>
+          <label for="email"><input type="text" name="email" th:field="*{profEmail}">E-mail</label>
+          <label for="email"><input type="text" name="email" th:field="*{profSenha}">Senha</label>
+          <button id="salvar" type="submit">Salvar Mudanças</button>
+        </form>
+  </section>
+  <footer>
+    <div class="footerCentro">
+      <div class="contatos"><span>Mapa do site:</span>
+        <span><a th:href="@{/index.html}">Home</a></span>
+        <span><a th:href="@{/monitorias.html}">Monitorias</a></span>
+        <span><a th:href="@{/tutor.html}">Torne-se um Tutor</a></span>
+        <span><a th:href="@{/quem.html}">Quem somos</a></span>
+        <span><a th:href="@{/login.html}">Login</a></span></div>
+      <div class="contatos"><span>CONTATO</span><span>E-mail: monitorando@gmail.com</span><span>Telefone: 11 9 7233-5888</span></div>
+      <div class="contatos"><span>SQUAD 24</span>
+      <span><a href="https://www.linkedin.com/in/ber-arthur/">Arthur Bernard</a></span>
+      <span><a href="https://">Bianca Tayla</a></span>
+      <span><a href="https://www.linkedin.com/in/kaua-amelo96/">Kauã Alves</a></span>
+      <span><a href="https://www.linkedin.com/in/mariana-moreira-santos-39417828a">Mariana Moreira</a></span>
+      <span><a href="https://">Maristela Santos</a></span>
+      <span><a href="https://www.linkedin.com/in/nayarabpereira">Nayara Pereira</a></span></div>
+      <div class="sociais"><span>SOCIAIS</span>
+      <div><a href=""><img src="/icons/icone-facebook-32x32.png"></a><a href=""><img src="/icons/icone-instagram-32x32.png"></a><a href=""><img src="/icons/icone-linkedin-32x32.png"></a></div>
+      </div>
+    </div>
+    <div class="copy">&copy;MONITORANDO. TODOS OS DIREITOS RESERVADOS</div>
+  </footer>
+  <script defer src="/js/perfil.js"></script>
+  <script src="/js/fastclick.js"></script>
+  <script src="/js/scroll.js"></script>
+  <script src="/js/fixed-responsive-nav.js"></script>
+</body>
+</html>
